@@ -55,7 +55,7 @@ id -> id del elemento afectado
                          'sort' => 'desc',
                          'orderby' => 1])}}">↑</a>
                     </th>
-                    <th scope="col">Preset ID
+                    <th scope="col">Preset Name
                         <a href="{{route(
                         'backend.purchase.index',
                         ['search' => $search,
@@ -90,6 +90,9 @@ id -> id del elemento afectado
                 @endforeach
                 </tbody>
                 </table>
+                <div class="col-lg-6">
+                    {{ $purchases->links() }}
+                </div>
                 <form id="formDelete" action="{{ url('backend/purchase') }}" method="post">
                     @method('delete')
                     @csrf

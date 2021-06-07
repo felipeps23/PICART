@@ -103,6 +103,9 @@ id -> id del elemento afectado
                 @endforeach
                 </tbody>
                 </table>
+                <div class="col-lg-6">
+                    {{ $valuations->links() }}
+                </div>
                 <form id="formDelete" action="{{ url('backend/valuation') }}" method="post">
                     @method('delete')
                     @csrf

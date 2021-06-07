@@ -75,121 +75,15 @@
                                 <div class="preset-date">
                                     <h5>{{ $preset->created_at }}</h5>
                                 </div>
+
                                 <img src="data:image/png;base64,{{ $preset->photo }}"></img> 
                                 <div class="user-see">
-                                    <h5>{{ $preset->user->nickname }}</h5>
+                                    <h5>{{ $preset->nickname }}</h5>
                                     <h4>{{ $preset->name }}</h4>
                                     <h3>${{ $preset->price }}</h3>
                                 </div>
                             </div>
                             @endforeach
-                            
-                             <div class="item">
-                                <div class="buy-preset"><a href="#">View and buy</a></div>
-                                <div class="preset-date">
-                                    <h5>02 - 05 - 20</h5>
-                                </div>
-                                <img src="{{url('/assets/frontend/images/preset1.jpg')}}"></img> 
-                                <div class="user-see">
-                                    <h5>sergiomh</h5>
-                                    <h4>Preset Name</h4>
-                                    <h3>25 €</h3>
-                                </div>
-                            </div>
-                            
-                            <div class="item">
-                                <div class="buy-preset"><a href="#">View and buy</a></div>
-                                <div class="preset-date">
-                                    <h5>02 - 05 - 20</h5>
-                                </div>
-                                <img src="{{url('/assets/frontend/images/preset3.jpg')}}"></img> 
-                                <div class="user-see">
-                                    <h5>sergiomh</h5>
-                                    <h4>Preset Name</h4>
-                                    <h3>25 €</h3>
-                                </div>
-                            </div>
-                            
-                            <div class="item">
-                                <div class="buy-preset"><a href="#">View and buy</a></div>
-                                <div class="preset-date">
-                                    <h5>02 - 05 - 20</h5>
-                                </div>
-                                <img src="{{url('/assets/frontend/images/preset4.jpg')}}"></img> 
-                                <div class="user-see">
-                                    <h5>sergiomh</h5>
-                                    <h4>Preset Name</h4>
-                                    <h3>25 €</h3>
-                                </div>
-                            </div>
-                            
-                            <div class="item">
-                                <div class="buy-preset"><a href="#">View and buy</a></div>
-                                <div class="preset-date">
-                                    <h5>02 - 05 - 20</h5>
-                                </div>
-                                <img src="{{url('/assets/frontend/images/preset5.jpg')}}"></img> 
-                                <div class="user-see">
-                                    <h5>sergiomh</h5>
-                                    <h4>Preset Name</h4>
-                                    <h3>25 €</h3>
-                                </div>
-                            </div>
-                            
-                            
-                            <div class="item">
-                                <div class="buy-preset"><a href="#">View and buy</a></div>
-                                <div class="preset-date">
-                                    <h5>02 - 05 - 20</h5>
-                                </div>
-                                <img src="{{url('/assets/frontend/images/preset7.jpg')}}"></img> 
-                                <div class="user-see">
-                                    <h5>sergiomh</h5>
-                                    <h4>Preset Name</h4>
-                                    <h3>25 €</h3>
-                                </div>
-                            </div>
-                            
-                            
-                            <div class="item">
-                                <div class="buy-preset"><a href="#">View and buy</a></div>
-                                <div class="preset-date">
-                                    <h5>02 - 05 - 20</h5>
-                                </div>
-                                <img src="{{url('/assets/frontend/images/preset2.jpg')}}"></img> 
-                                <div class="user-see">
-                                    <h5>sergiomh</h5>
-                                    <h4>Preset Name</h4>
-                                    <h3>25 €</h3>
-                                </div>
-                            </div>
-                            
-                             <div class="item">
-                                <div class="buy-preset"><a href="#">View and buy</a></div>
-                                <div class="preset-date">
-                                    <h5>02 - 05 - 20</h5>
-                                </div>
-                                <img src="{{url('/assets/frontend/images/preset8.jpg')}}"></img> 
-                                <div class="user-see">
-                                    <h5>sergiomh</h5>
-                                    <h4>Preset Name</h4>
-                                    <h3>25 €</h3>
-                                </div>
-                            </div>
-                            
-                             <div class="item">
-                                <div class="buy-preset"><a href="#">View and buy</a></div>
-                                <div class="preset-date">
-                                    <h5>02 - 05 - 20</h5>
-                                </div>
-                                <img src="{{url('/assets/frontend/images/preset9.jpg')}}"></img> 
-                                <div class="user-see">
-                                    <h5>sergiomh</h5>
-                                    <h4>Preset Name</h4>
-                                    <h3>25 €</h3>
-                                </div>
-                            </div>
-                            
                         </div>
                     </div>
                     

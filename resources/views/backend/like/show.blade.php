@@ -27,10 +27,10 @@
                 <tbody>
                     <tr>
                         <td>User name</td>
-                        <td>{{$like->iduser}}</td>
+                        <td>{{$like->user->nickname}}</td>
                     </tr>
                     <tr>
-                        <td>Id Preset</td>
+                        <td>Id Photo</td>
                         <td>{{$like->idphoto}}</td>
                     </tr>
                 </tbody>

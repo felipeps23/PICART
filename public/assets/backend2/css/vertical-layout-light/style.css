@@ -30592,4 +30592,8 @@ div.tagsinput span.tag a {
   }
 }
 
+.table-responsive{
+  overflow-x:none;
+}
+
 /*# sourceMappingURL=../maps/vertical-layout-light/style.css.map */

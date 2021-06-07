@@ -88,7 +88,7 @@ class FrontendPurchaseController extends Controller
     public function myshopping() {
         //$purchases = Purchase::all();
         $id = auth()->user()->id;
-        $purchases = DB::select("select presets.name as pname, users.nickname, presets.price, presets.photo, purchases.idpreset from purchases, presets, users where purchases.iduser = $id and purchases.idpreset = presets.id and users.id = $id");
+        $purchases = DB::select("select presets.name as pname, users.nickname, presets.price, presets.photo, purchases.idpreset from purchases, presets, users where purchases.iduser = $id and purchases.idpreset = presets.id and users.id = $id order by presets.id desc");
         return view ('frontend.purchase.myshopping', ['purchases' => $purchases]);
     }
     

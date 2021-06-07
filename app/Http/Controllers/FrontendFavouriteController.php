@@ -108,7 +108,7 @@ class FrontendFavouriteController extends Controller
     
     public function myfavourites() {
         $id = auth()->user()->id;
-        $favourites = DB::select("select favourites.created_at, presets.photo as presetphoto, presets.name as pname, presets.price from favourites, presets, users where favourites.iduser = $id and favourites.idpreset = presets.id and users.id = $id");
+        $favourites = DB::select("select favourites.created_at, presets.photo as presetphoto, presets.name as pname, presets.price, presets.id as idpreset from favourites, presets, users where favourites.iduser = $id and favourites.idpreset = presets.id and users.id = $id order by presets.id desc");
         return view ('frontend.favourite.savedpresets', ['favourites' => $favourites]);
     }
 }

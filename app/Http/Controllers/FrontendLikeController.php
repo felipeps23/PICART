@@ -16,7 +16,7 @@ class FrontendLikeController extends Controller
     public function index()
     {
         $id = auth()->user()->id;
-        $likes = DB::select("select likes.id, users.nickname, photos.photo from likes, users, photos where likes.iduser = users.id and likes.idphoto = photos.id and likes.iduser = $id");
+        $likes = DB::select("select likes.id, users.nickname as nickname, photos.id as idphoto, photos.photo, photos.created_at as datecreate from likes, users, photos where likes.iduser = users.id and likes.idphoto = photos.id and likes.iduser = $id order by photos.created_at desc");
         return view ('frontend.like.likes', ['likes' => $likes]);
     }
 

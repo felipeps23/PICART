@@ -111,7 +111,9 @@
                             <div class="carct"><h3>ISO</h3> <h4>{{ $photo->iso }}</h4></div>
                             <div class="carct"><h3>Focal</h3> <h4>{{ $photo->focal }}</h4></div>
                             <div class="carct carctend"><h3>Preset</h3> <h4>{{ $photo->preset->name }}</h4></div>
+                            @if($photo->iduser == Auth::user()->id)
                             <div class="edit-a"><a class="delete-feature" href="{{ url('/home/photos/' . $photo->id . '/delete') }}">Delete</a><a href="{{ url('/home/photos/' . $photo->id . '/edit') }}">Edit Photo</a></div>
+                            @endif
                         </div>
                     </div>
                     
@@ -134,7 +136,12 @@
                                  <h5>{{$comment->nickname}}</h5>
                                  <h6>{{ $comment->description }}</h6>
                              </div>
-                         <a href="{{ url('comment/'. $comment->idcomment . '/delete') }}"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-trash fa-w-14 fa-9x"><path fill="currentColor" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z" class=""></path></svg></a>
+                             @if($photo->iduser == Auth::user()->id)
+                             <a href="{{ url('comment/'. $comment->idcomment . '/delete') }}"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-trash fa-w-14 fa-9x"><path fill="currentColor" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z" class=""></path></svg></a>
+                             @elseif($comment->idusercomment == Auth::user()->id)
+                             <a href="{{ url('comment/'. $comment->idcomment . '/delete') }}"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-trash fa-w-14 fa-9x"><path fill="currentColor" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z" class=""></path></svg></a>
+
+                             @endif
                          </div>
                          @endforeach
                     </div>

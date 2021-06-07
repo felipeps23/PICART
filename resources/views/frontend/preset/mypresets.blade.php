@@ -80,7 +80,7 @@
                                 <div class="preset-date">
                                     <h5>{{ $preset->created_at }}</h5>
                                 </div>
-                                <a href=""><img src="data:image/png;base64,{{ $preset->photo }}"></img> </a> 
+                                <a href="{{ url('home/presets/' . $preset->idpreset  ) }}"><img src="data:image/png;base64,{{ $preset->photo }}"></img> </a>
                                 <div class="user-see">
                                     <h5>{{ $preset->name }}</h5>
                                     <h3>{{ $preset->price }}</h3>

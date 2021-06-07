@@ -88,6 +88,9 @@ id -> id del elemento afectado
                 @endforeach
                 </tbody>
                 </table>
+                <div class="col-lg-6">
+                    {{ $likes->links() }}
+                </div>
                 <form id="formDelete" action="{{ url('backend/like') }}" method="post">
                     @method('delete')
                     @csrf

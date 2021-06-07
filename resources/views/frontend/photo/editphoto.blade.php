@@ -97,8 +97,6 @@
                                             
                                             @endforeach
                                         </select>
-                                      
-                                    
                                     </div>
                                
                                 <label for="idpreset">Preset</label>
@@ -140,7 +138,7 @@
                                 </div>
 
                                 <label for="type">Type</label>
-                                <select name="type" id="type" required class="custom-select w-100">
+                                <select name="type" id="type" required="" class="custom-select w-100">
                                     <option value="" disabled>Select type</option>
                                     
                                     @if($photo->type == old('type', $photo->type))

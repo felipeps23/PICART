@@ -17,7 +17,7 @@ class FrontendPresetController extends Controller
      */
     public function index()
     {
-        $presets = Preset::all();
+        $presets = DB::select("SELECT * from users, presets where presets.iduser = users.id order by presets.id desc");
         return view ('frontend.preset.presets', ['presets' => $presets]);
     }
 
@@ -86,7 +86,7 @@ class FrontendPresetController extends Controller
     public function showpreset(User $user, $id)
     {
         $preset = Preset::find($id);
-        $valuations = DB::select("select presets.id, presets.iduser, presets.name, presets.description, presets.photo, presets.file, presets.price, presets.created_at, valuations.id as idvaluation, valuations.iduser, valuations.idpreset, valuations.text_valuation, valuations.valuation, valuations.created_at, users.nickname, users.id from presets, valuations, users where presets.id = valuations.idpreset and valuations.idpreset = $id and valuations.iduser = users.id");
+        $valuations = DB::select("select presets.id, presets.iduser, presets.name, presets.description, presets.photo, presets.file, presets.price, presets.created_at, valuations.id as idvaluation, valuations.iduser as iduservaluation, valuations.idpreset, valuations.text_valuation, valuations.valuation, valuations.created_at, users.nickname, users.id from presets, valuations, users where presets.id = valuations.idpreset and valuations.idpreset = $id and valuations.iduser = users.id order by valuations.created_at desc");
         $iduserid = auth()->user()->id;
         $presetfavourites = DB::select("select * from presets, favourites WHERE favourites.idpreset = presets.id and presets.id = $id and favourites.iduser = $iduserid");
         //dd($contact);
@@ -155,7 +155,7 @@ class FrontendPresetController extends Controller
     
     public function mypresets() {
         $id = auth()->user()->id;
-        $presets = DB::select("select * from presets, users where presets.iduser = $id and users.id = $id");
+        $presets = DB::select("select presets.photo, presets.id as idpreset, presets.name, presets.created_at, presets.price from presets, users where presets.iduser = $id and users.id = $id order by presets.created_at desc");
         return view ('frontend.preset.mypresets', ['presets' => $presets]);
     }
     public function updateCreate(Request $request, Preset $preset)

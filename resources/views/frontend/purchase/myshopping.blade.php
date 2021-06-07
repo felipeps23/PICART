@@ -81,7 +81,7 @@
                        @foreach ($purchases as $purchase)
                        <div class="article-cart">
                            
-                           <div class="img-cart"><img src="data:image/png;base64,{{ $purchase->photo }}"></img></div>
+                           <div class="img-cart"><a href="{{ url('home/presets/' . $purchase->idpreset  ) }}"><img src="data:image/png;base64,{{ $purchase->photo }}"></img></a></div>
                            <p>{{ $purchase->pname }}</p>
                            <p>{{ $purchase->nickname }}</p>
                            <p>{{ $purchase->price }} €</p>
@@ -90,26 +90,6 @@
                            
                        </div>
                        @endforeach
-                       
-                        <div class="article-cart">
-                           
-                           <div class="img-cart"><img src="{{url('/assets/frontend/images/preset2.jpg')}}"></img></div>
-                           <p>BP2</p>
-                           <p>Nickname</p>
-                           <p>25 €</p>
-                           <div class="p-end"> <a class="enlace-end">Download Again</a></div>
-                          
-                       </div>
-                       
-                       <div class="article-cart">
-                           
-                           <div class="img-cart"><img src="{{url('/assets/frontend/images/preset4.jpg')}}"></img></div>
-                           <p>BP2</p>
-                           <p>Nickname</p>
-                           <p>25 €</p>
-                           <div class="p-end"> <a class="enlace-end">Download Again</a></div>
-                          
-                       </div>
                     </div>
                    
                     

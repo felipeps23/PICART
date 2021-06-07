@@ -80,11 +80,6 @@
                 <label for="text_valuation">Text Valuation</label>
                 <input type="text" required class="form-control" id="text_valuation" name="text_valuation">
             </div>
-            
-            <div class="form-group">
-                <label for="date">Text Valuation</label>
-                <input type="date" required class="form-control" id="date" name="date">
-            </div>
         </div>
         <!-- /.card-body -->
         <div class="card-body">

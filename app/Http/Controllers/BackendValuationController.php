@@ -16,7 +16,7 @@ class BackendValuationController extends Controller
      */
     public function index(Request $request)
     {
-        $order = ['id', 'iduser', 'idpreset','valuation', 'text_valuation', 'date'];
+        $order = ['id', 'iduser', 'idpreset','valuation', 'text_valuation'];
         $valuations = new Valuation();
         $rows = 3;
         if($request->input('rows') != null && is_numeric($request->input('rows'))) {
@@ -28,8 +28,7 @@ class BackendValuationController extends Controller
                                 ->orWhere('iduser', 'like', '%' . $search . '%')
                                 ->orWhere('idpreset', 'like', '%' . $search . '%')
                                 ->orWhere('valuation', 'like', '%' . $search . '%')
-                                ->orWhere('text_valuation', 'like', '%' . $search . '%')
-                                ->orWhere('date', 'like', '%' . $search . '%');
+                                ->orWhere('text_valuation', 'like', '%' . $search . '%');
         }
         $orderby = $request->input('orderby');
         $sort = 'asc';

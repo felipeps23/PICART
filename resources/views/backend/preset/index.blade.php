@@ -103,6 +103,9 @@ id -> id del elemento afectado
                 @endforeach
                 </tbody>
                 </table>
+                <div class="col-lg-6">
+                    {{ $presets->links() }}
+                </div>
                 <form id="formDelete" action="{{ url('backend/preset') }}" method="post">
                     @method('delete')
                     @csrf

@@ -81,8 +81,8 @@
                                  <!--    <h5>Click or drag the cover here</h5>-->
                                  <!--    <input type="file" accept="image/*" onchange="loadFile(event)" class="fileout">-->
                                  <!--</div>-->
-                                  <label for="file">Archive ( .ZIP or .RAR )</label>
-                                <input type="file" class="file-zip">
+                                <!--  <label for="file">Archive ( .ZIP or .RAR )</label>-->
+                                <!--<input type="file" class="file-zip">-->
                                 
                                 <label for="name">Name preset</label>
                                 <input id="name" type="text" class="form-control " name="name" value="{{ old('name', $preset->name) }}" required="" autocomplete="name" autofocus="">
@@ -94,9 +94,7 @@
                                
                                 
                                     <div class="button-form">
-                                         <button type="submit">
-                                    Edit
-                                </button>
+                                         <button type="submit">Edit</button>
                                     </div>
                                
                                 

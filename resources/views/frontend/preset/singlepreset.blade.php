@@ -107,8 +107,12 @@
                             <div class="carct"><h3>Name</h3> <h4>{{ $preset->name }}</h4></div>
                             <div class="carct"><h3>Description</h3> <h4>{{ $preset->description }}</h4></div>
                             <div class="carct carctend"><h3>Price</h3> <h4>{{ $preset->price }} $</h4></div>
-                            <a href="{{ url('presets/cart/' . $preset->id) }}" class="buy-cart">Buy</a>
-                            <div class="edit-a"><a class="delete-feature" href="{{ url('/home/presets/' . $preset->id . '/delete') }}">Delete</a><a href="{{ url('/home/presets/' . $preset->id . '/edit') }}">Edit Preset</a></div>
+                            @if($preset->iduser == Auth::user()->id)
+                              <div class="edit-a"><a class="delete-feature" href="{{ url('/home/presets/' . $preset->id . '/delete') }}">Delete</a><a href="{{ url('/home/presets/' . $preset->id . '/edit') }}">Edit Preset</a></div>
+
+                            @else
+                               <a href="{{ url('presets/cart/' . $preset->id) }}" class="buy-cart">Buy</a>
+                               @endif
                         </div>
                     </div>
                     
@@ -180,7 +184,11 @@
                                  <h6>{{ $valuation->text_valuation }}</h6>
                                 
                              </div>
-                         <a href="{{ url('valuation/'. $valuation->idvaluation . '/delete') }}"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-trash fa-w-14 fa-9x"><path fill="currentColor" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z" class=""></path></svg></a>
+                             @if($preset->iduser == Auth::user()->id)
+                                     <a href="{{ url('valuation/'. $valuation->idvaluation . '/delete') }}"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-trash fa-w-14 fa-9x"><path fill="currentColor" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z" class=""></path></svg></a>
+                              @elseif($valuation->iduservaluation == Auth::user()->id)
+                                   <a href="{{ url('valuation/'. $valuation->idvaluation . '/delete') }}"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-trash fa-w-14 fa-9x"><path fill="currentColor" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z" class=""></path></svg></a>
+                              @endif
                          </div>
                          @endforeach
                          

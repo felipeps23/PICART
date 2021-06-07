@@ -77,7 +77,7 @@
                             <h2>{{ Auth::user()->nickname }}</h2>
                             @foreach ($photos as $photo)
                             <div class="item">
-                                <a href=""><img src="data:image/png;base64,{{ $photo->photo }}"></img> </a>
+                                <a href="{{ url('home/photos/' . $photo->id  ) }}"><img src="data:image/png;base64,{{ $photo->photo }}"></img> </a>
                                 <div class="user-see">
                                     <h5>{{ $photo->created_at }}</h5>
                                     <!--<a data-fancybox="gallery" href="{{url('/assets/frontend/images/1.jpg')}}">-->
@@ -87,44 +87,66 @@
                             </div>
                             @endforeach
                             
-                            <div class="item">
-                                <img src="{{url('/assets/frontend/images/2.jpg')}}"></img> 
-                                <div class="user-see">
-                                   <h5>02-04-21</h5>
-                                    <!--<a data-fancybox="gallery" href="{{url('/assets/frontend/images/1.jpg')}}">-->
-                                    <!--    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="eye" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-eye fa-w-18 fa-fw fa-2x"><path fill="currentColor" d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z" class=""></path></svg>-->
-                                    <!--</a>-->
-                                </div>
-                            </div>
-                            
-                            <div class="item">
-                                <img src="{{url('/assets/frontend/images/3.jpg')}}"></img> 
-                                <div class="user-see">
-                                    <h5>02-04-21</h5>
-                                    <!--<a data-fancybox="gallery" href="{{url('/assets/frontend/images/1.jpg')}}">-->
-                                    <!--    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="eye" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-eye fa-w-18 fa-fw fa-2x"><path fill="currentColor" d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z" class=""></path></svg>-->
-                                    <!--</a>-->
-                                </div>
-                            </div>
-                            
                         </div>
                     </div>
+                    <style type="text/css">
+                    #myphotos-picart .section-gallery .grafic #vertgraph li.info {
+                        left: 0!important;
+                        background-position: -112px bottom !important;
+                    }
+                    #myphotos-picart .section-gallery .grafic #vertgraph ul{
+                            display: flex;
+                    width: 378px;
+                    height: 207px;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                   align-items: flex-end;
+                    justify-content: center;
+                                    }
+                    #myphotos-picart .section-gallery .grafic #vertgraph ul li {
+                    position: relative;
+                    /* padding: 0 30px; */
+                    width: 28px;
+                    height: 160px;
+                    bottom: 34px;
+                    font-family: Lato;
+                    font-size: .9em;
+                    /* padding: 0 !important; */
+                    /* margin: 0 !important; */
+                    margin: 0 25px!important;
+                    background: black;
+                    text-align: center;
+                    font-weight: 300;
+                    color: white;
+                    line-height: 2.5em;
+                    -webkit-box-shadow: 13px 10px 14px -10px rgb(0 0 0 / 75%);
+                    -moz-box-shadow: 13px 10px 14px -10px rgba(0, 0, 0, 0.75);
+                    box-shadow: 10px 10px 14px -10px rgb(0 0 0 / 75%);
+                            
+                        }
+                    </style>
                     <div class="col-6 grafic">
                         <div><div class="content-grafic">
                             <h2>My likes from the last 5 photos</h2>
                             <div id="vertgraph">
                                 <ul>
-                                <li class="critical" style="height: 150px;">22 <div class="img-grafic"><img src="{{url('/assets/frontend/images/1.jpg')}}"></img></div> </li>
-                                <li class="high" style="height: 80px;">7 <div class="img-grafic"><img src="{{url('/assets/frontend/images/2.jpg')}}"></img></div></li>
-                                <li class="medium" style="height: 50px;">3 <div class="img-grafic"><img src="{{url('/assets/frontend/images/3.jpg')}}"></img></div></li>
-                                <li class="low" style="height: 90px;">8 <div class="img-grafic"><img src="{{url('/assets/frontend/images/4.jpg')}}"></img></div></li>
-                                <li class="info" style="height: 40px;">2 <div class="img-grafic"><img src="{{url('/assets/frontend/images/5.jpg')}}"></img></div></li>
+                                    @foreach ($photosgraphics as $photosgraphic)
+                                        
+                                        <li class="info" style="height: {{ $photosgraphic->numbergraphic }}0%;max-height: 90%!important;padding-bottom: 28px!important;">{{ $photosgraphic->numbergraphic }} <div class="img-grafic"><img src="data:image/png;base64,{{ $photosgraphic->img }}"></img></div> </li>
+                                        <!--<li class="high" style="height: 80px;">7 <div class="img-grafic"><img src="{{url('/assets/frontend/images/2.jpg')}}"></img></div></li>-->
+                                        <!--<li class="medium" style="height: 50px;">3 <div class="img-grafic"><img src="{{url('/assets/frontend/images/3.jpg')}}"></img></div></li>-->
+                                        <!--<li class="low" style="height: 90px;">8 <div class="img-grafic"><img src="{{url('/assets/frontend/images/4.jpg')}}"></img></div></li>-->
+                                        <!--<li class="info" style="height: 40px;">2 <div class="img-grafic"><img src="{{url('/assets/frontend/images/5.jpg')}}"></img></div></li>-->
+                                    @endforeach
                                 </ul>
                             </div>
                         </div></div>
                         
                         
                     </div>
+                </div>
+            </div>
                 </div>
             </div>
         

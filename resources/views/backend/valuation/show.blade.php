@@ -49,10 +49,6 @@
                         <td>Text Valuation</td>
                         <td>{{$valuation->text_valuation}}</td>
                     </tr>
-                    <tr>
-                        <td>Date</td>
-                        <td>{{$valuation->date}}</td>
-                    </tr>
                 </tbody>
                 </table>  
                 </div>

@@ -18,7 +18,7 @@ class FrontendPhotoController extends Controller
      */
     public function index()
     {
-        $photos = Photo::all();
+        $photos = DB::select("SELECT * from users,photos where photos.iduser = users.id order by photos.id desc");
         return view ('frontend.photo.feed', ['photos' => $photos]);
     }
 
@@ -82,7 +82,7 @@ class FrontendPhotoController extends Controller
     public function showphoto(User $user, $id)
     {
         $photo = Photo::find($id);
-        $comments = DB::select("select comments.id as idcomment, comments.iduser, comments.idphoto, comments.description, photos.id, photos.iduser, photos.idpreset, photos.camera, photos.lens, photos.shutter_speed, photos.iso, photos.focal, photos.type, photos.created_at, users.id, users.nickname, users.name from comments, photos, users where photos.id = comments.idphoto and comments.idphoto = $id and comments.iduser = users.id");
+        $comments = DB::select("select comments.id as idcomment, comments.iduser as idusercomment, comments.idphoto, comments.description, photos.id, photos.iduser, photos.idpreset, photos.camera, photos.lens, photos.shutter_speed, photos.iso, photos.focal, photos.type, photos.created_at, users.id, users.nickname, users.name from comments, photos, users where photos.id = comments.idphoto and comments.idphoto = $id and comments.iduser = users.id order by comments.created_at desc");
         $likesall =DB::select("SELECT COUNT(*) as likesall from photos, likes where photos.id = likes.idphoto and photos.id = $id");
         // dd($likesall);
         $iduserid = auth()->user()->id;
@@ -191,8 +191,9 @@ class FrontendPhotoController extends Controller
     
     public function myphotos() {
         $id = auth()->user()->id;
-        $photos = DB::select("select * from photos, users where photos.iduser = $id and users.id = $id");
-        return view ('frontend.photo.myphotos', ['photos' => $photos]);
+        $photos = DB::select("select photos.id, photos.iduser, photos.photo, photos.created_at from photos, users where photos.iduser = $id and users.id = $id order by photos.created_at desc");
+        $photosgraphics = DB::select("select photos.id as idphotos, photos.photo as img, count(*) as numbergraphic from photos, users, likes where users.id = photos.iduser and photos.iduser = $id and users.id = $id and photos.id = likes.idphoto GROUP BY idphotos, img ORDER by photos.created_at desc limit 5");
+        return view ('frontend.photo.myphotos', ['photos' => $photos, 'photosgraphics' => $photosgraphics ]);
     }
 
 }
