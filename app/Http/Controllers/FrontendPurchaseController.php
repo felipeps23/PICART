@@ -88,13 +88,19 @@ class FrontendPurchaseController extends Controller
     public function myshopping() {
         //$purchases = Purchase::all();
         $id = auth()->user()->id;
-        $purchases = DB::select("select presets.name as pname, users.nickname, presets.price, presets.photo from purchases, presets, users where purchases.iduser = $id and purchases.idpreset = presets.id and users.id = $id");
+        $purchases = DB::select("select presets.name as pname, users.nickname, presets.price, presets.photo, purchases.idpreset from purchases, presets, users where purchases.iduser = $id and purchases.idpreset = presets.id and users.id = $id");
         return view ('frontend.purchase.myshopping', ['purchases' => $purchases]);
     }
     
-    public function cart(Request $request)
+    public function beforecart($id){
+        $preset = Preset::find($id);
+        return view ('frontend.purchase.cart', ['preset' => $preset]);
+    }
+    
+    
+    public function buypreset(Request $request)
     {
-         $object = new Purchase($request->all());
+        $object = new Purchase($request->all());
 
         // dd($object);
         try {
@@ -107,7 +113,7 @@ class FrontendPurchaseController extends Controller
         }
         if($object->id > 0) {
             $response = ['op' => 'create', 'r' => $result, 'id' => $object->id];
-            return redirect('/cart/{id}')->with($response);
+            return redirect('/myshopping')->with($response);
         } else {
             return back()->withInput()->with(['error' => 'algo ha fallado']);
         }

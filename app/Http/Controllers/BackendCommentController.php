@@ -16,7 +16,7 @@ class BackendCommentController extends Controller
      */
     public function index(Request $request)
     {
-        $order = ['id', 'iduser', 'idphoto', 'description', 'date'];
+        $order = ['id', 'iduser', 'idphoto', 'description'];
         $comments = new Comment();
         $rows = 3;
         if($request->input('rows') != null && is_numeric($request->input('rows'))) {

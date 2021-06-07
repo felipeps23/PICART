@@ -107,8 +107,8 @@
                             <div class="carct"><h3>Name</h3> <h4>{{ $preset->name }}</h4></div>
                             <div class="carct"><h3>Description</h3> <h4>{{ $preset->description }}</h4></div>
                             <div class="carct carctend"><h3>Price</h3> <h4>{{ $preset->price }} $</h4></div>
-                            <a href="{{ url('product/cart/' . $preset->id) }}" class="buy-cart">Buy</a>
-                            <div class="edit-a"><a class="delete-feature" href="">Delete</a><a href="{{ url('/home/presets/' . $preset->id . '/edit') }}">Edit Preset</a></div>
+                            <a href="{{ url('presets/cart/' . $preset->id) }}" class="buy-cart">Buy</a>
+                            <div class="edit-a"><a class="delete-feature" href="{{ url('/home/presets/' . $preset->id . '/delete') }}">Delete</a><a href="{{ url('/home/presets/' . $preset->id . '/edit') }}">Edit Preset</a></div>
                         </div>
                     </div>
                     
@@ -128,33 +128,76 @@
                              <div class="icon-user"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-user fa-w-14 fa-9x"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z" class=""></path></svg></div>
                              <div class="text-comment">
                                  <h5>{{$valuation->nickname}}</h5>
-                                 <div class="star">
-                                    <span class=" checked">★ </span>
-                                    <span class="checked">★ </span>
-                                    <span class="checked">★ </span>
-                                    <span class="">★ </span>
-                                    <span class="">★ </span>
-                                    </div>
+                                     @if($valuation->valuation == 1)
+                                             <div class="star">
+                                            <span class="checked">★ </span>
+                                            <span >★ </span>
+                                            <span >★ </span>
+                                            <span class="">★ </span>
+                                            <span class="">★ </span>
+                                            </div>
+                                    @elseif( $valuation->valuation == 2)
+                                         <div class="star">
+                                            <span class="checked">★ </span>
+                                            <span class="checked">★ </span>
+                                            <span >★ </span>
+                                            <span class="">★ </span>
+                                            <span class="">★ </span>
+                                            </div>
+                                     @elseif( $valuation->valuation == 3)
+                                         <div class="star">
+                                            <span class="checked">★ </span>
+                                            <span class="checked">★ </span>
+                                            <span class="checked">★ </span>
+                                            <span class="">★ </span>
+                                            <span class="">★ </span>
+                                            </div>
+                                      @elseif( $valuation->valuation == 4)
+                                         <div class="star">
+                                            <span class="checked">★ </span>
+                                            <span class="checked">★ </span>
+                                            <span class="checked">★ </span>
+                                            <span class="checked">★ </span>
+                                            <span class="">★ </span>
+                                            </div>   
+                                      @elseif( $valuation->valuation == 5)
+                                         <div class="star">
+                                            <span class="checked">★ </span>
+                                            <span class="checked">★ </span>
+                                            <span class="checked">★ </span>
+                                            <span class="checked">★ </span>
+                                            <span class="checked">★ </span>
+                                            </div>     
+                                        @else
+                                        <div class="star">
+                                            <span >★ </span>
+                                            <span >★ </span>
+                                            <span >★ </span>
+                                            <span class="">★ </span>
+                                            <span class="">★ </span>
+                                            </div>
+                                        @endif
                                  <h6>{{ $valuation->text_valuation }}</h6>
+                                
                              </div>
-                         <a href=""><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-trash fa-w-14 fa-9x"><path fill="currentColor" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z" class=""></path></svg></a>
+                         <a href="{{ url('valuation/'. $valuation->idvaluation . '/delete') }}"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-trash fa-w-14 fa-9x"><path fill="currentColor" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z" class=""></path></svg></a>
                          </div>
                          @endforeach
                          
-                         <div class="comment">
-                             <div class="icon-user"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-user fa-w-14 fa-9x"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z" class=""></path></svg></div>
-                             <div class="text-comment">
-                                 <h5>FelipeCaraPapa</h5>
-                                 <div class="star">
-                                    <span class=" checked">★ </span>
-                                    <span class="checked">★ </span>
-                                    <span class="checked">★ </span>
-                                    <span class="">★ </span>
-                                    <span class="">★ </span>
-                                    </div>
-                                 <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
-                             </div>
-                         </div>
+                         <!--<div class="comment">-->
+                         <!--    <div class="icon-user"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-user fa-w-14 fa-9x"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z" class=""></path></svg></div>-->
+                         <!--    <div class="text-comment">-->
+                         <!--        <h5>FelipeCaraPapa</h5>-->
+                         <!--        <div class="star">-->
+                         <!--           <span class=" checked">★ </span>-->
+                         <!--           <span class="checked">★ </span>-->
+                         <!--           <span class="checked">★ </span>-->
+                         <!--           <span class="">★ </span>-->
+                         <!--           <span class="">★ </span>-->
+                         <!--           </div>-->
+                         <!--        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>-->
+                         <!--    </div>-->
+                         <!--</div>-->
                     </div>
 
                 </div>
@@ -174,18 +217,19 @@
                             <input type="text" maxlength="1000" minlength="1" required class="form-control" id="iduser" placeholder="User" name="iduser" value="{{ Auth::user()->id }}" style="display:none">
                             <input type="text" maxlength="1000" minlength="1" required class="form-control" id="idpreset" placeholder="Preset" name="idpreset" value="{{ $preset->id }}" style="display:none">
                             <div class="rate">
-                                <input type="radio" id="star5" name="rate" value="5" />
+                                <input  type="radio" id="star5"  value="5" name="valuation" id="valuation"/>
                                 <label for="star5" title="text">5 stars</label>
-                                <input type="radio" id="star4" name="rate" value="4" />
+                                <input type="radio" id="star4"  value="4" name="valuation" id="valuation"/>
                                 <label for="star4" title="text">4 stars</label>
-                                <input type="radio" id="star3" name="rate" value="3" />
+                                <input type="radio" id="star3" value="3" name="valuation" id="valuation"/>
                                 <label for="star3" title="text">3 stars</label>
-                                <input type="radio" id="star2" name="rate" value="2" />
+                                <input type="radio" id="star2"  value="2" name="valuation" id="valuation"/>
                                 <label for="star2" title="text">2 stars</label>
-                                <input type="radio" id="star1" name="rate" value="1" />
+                                <input type="radio" id="star1" value="1" name="valuation" id="valuation"/>
                                 <label for="star1" title="text">1 star</label>
                           </div>
-                          <textarea placeholder="Valoration" name="text_valuation" id="text_valuation">{{ old('text_valuation') }}</textarea>
+                          
+                          <textarea placeholder="Valuation" name="text_valuation" id="text_valuation">{{ old('text_valuation') }}</textarea>
                           <input type="submit" value="Submit">
                         </form> 
                     </div>

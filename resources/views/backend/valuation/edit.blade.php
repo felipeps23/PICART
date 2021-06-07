@@ -43,7 +43,7 @@
                     <option value="" disabled>Select user</option>
                     @foreach($users as $user)
                     
-                    @if($user->id == old('iduser', $user->iduser))
+                    @if($user->id == old('iduser', $valuation->iduser))
                     
                     <option selected value="{{ $user->id }}">{{ $user->name }}</option>
                     @else
@@ -62,7 +62,7 @@
                     <option value="" disabled>Select preset</option>
                     @foreach($presets as $preset)
                     
-                    @if($preset->id == old('idpreset', $preset->idpreset))
+                    @if($preset->id == old('idpreset', $valuation->idpreset))
                     
                     <option selected value="{{ $preset->id }}">{{ $preset->name }}</option>
                     @else
@@ -79,12 +79,8 @@
                 <input type="number" min="1" max="5" required class="form-control" id="valuation" name="valuation" value="{{ old('valuation', $valuation->valuation) }}">
             </div>
             <div class="form-group">
-                <label for="text_valuation">Date</label>
+                <label for="text_valuation">Text Valuation</label>
                 <input type="text" required class="form-control" id="text_valuation" name="text_valuation" value="{{ old('text_valuation', $valuation->text_valuation) }}">
-            </div>
-            <div class="form-group">
-                <label for="date">Date</label>
-                <input type="date" required class="form-control" id="date" name="date" value="{{ old('date', $valuation->date) }}">
             </div>
        
         <!-- /.card-body -->

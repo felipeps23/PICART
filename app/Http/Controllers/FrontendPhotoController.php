@@ -82,17 +82,19 @@ class FrontendPhotoController extends Controller
     public function showphoto(User $user, $id)
     {
         $photo = Photo::find($id);
-        $comments = DB::select("select * from comments, photos, users where photos.id = comments.idphoto and comments.idphoto = $id and comments.iduser = users.id");
+        $comments = DB::select("select comments.id as idcomment, comments.iduser, comments.idphoto, comments.description, photos.id, photos.iduser, photos.idpreset, photos.camera, photos.lens, photos.shutter_speed, photos.iso, photos.focal, photos.type, photos.created_at, users.id, users.nickname, users.name from comments, photos, users where photos.id = comments.idphoto and comments.idphoto = $id and comments.iduser = users.id");
+        $likesall =DB::select("SELECT COUNT(*) as likesall from photos, likes where photos.id = likes.idphoto and photos.id = $id");
+        // dd($likesall);
         $iduserid = auth()->user()->id;
         $photolikes = DB::select("select * from photos, likes WHERE likes.idphoto = photos.id and photos.id = $id and likes.iduser = $iduserid");
         //dd($contact);
         if($photolikes == null ){
            $photolikes=0;
-            return view('frontend.photo.singlephoto', ['photo' => $photo, 'comments' => $comments, 'photolikes' => $photolikes]);
-            
+            return view('frontend.photo.singlephoto', ['photo' => $photo, 'comments' => $comments, 'photolikes' => $photolikes, 'likesall'=>$likesall]);
+
         }
-       
-        return view('frontend.photo.singlephoto', ['photo' => $photo, 'comments' => $comments, 'photolikes' => $photolikes]);
+
+        return view('frontend.photo.singlephoto', ['photo' => $photo, 'comments' => $comments, 'photolikes' => $photolikes,'likesall'=> $likesall]);
     }
     
     public function createComment(Request $request, $id)
@@ -153,6 +155,20 @@ class FrontendPhotoController extends Controller
             return back()->withInput()->with(['error' => 'Algo ha fallado']);
         }
     }
+    
+    public function destroyComment($id)
+    {
+        $comment = Comment::find($id);
+        $id = $comment->id;
+        try {
+            $result = $comment->delete();
+        } catch(\Exception $e) {
+            $result = 0;
+
+        }
+        $response = ['op' => 'Destroy', 'r' => $result, 'id' => $id];
+        return back();
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -162,7 +178,15 @@ class FrontendPhotoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $photo = Photo::find($id);
+       $id = $photo->id;
+        try {
+            $result = $photo->delete();
+        } catch(\Exception $e) {
+            $result = 0;
+        }
+        $response = ['op' => 'Destroy', 'r' => $result, 'id' => $id];
+        return redirect('/feed');
     }
     
     public function myphotos() {

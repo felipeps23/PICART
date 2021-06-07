@@ -92,7 +92,7 @@ id -> id del elemento afectado
                         <td><img src="data:image/png;base64,{{ $comment->photo->photo }}" style="width: auto;
     height: 60px;
     border-radius: 0;"></td>
-                        <td>{{ $comment->date }}</td>
+                        <td>{{ $comment->created_at }}</td>
                         
                         <td><a href="{{ url('backend/comment/' . $comment->id) }}" class="btn btn-inverse-primary btn-fw">Show</a></td>
                         <td><a href="{{ url('backend/comment/' . $comment->id . '/edit') }}" class="btn btn-inverse-success btn-fw">Edit</a></td>

@@ -37,10 +37,6 @@
                     <!--    <td>Preset photo</td>-->
                     <!--    <td><img src="data:image/png;base64,{{ $purchase->preset->photo }}" style="width:50px;"></td>-->
                     <!--</tr>-->
-                    <tr>
-                        <td>Date</td>
-                        <td>{{$purchase->date}}</td>
-                    </tr>
                 </tbody>
                 </table>  
                 </div>

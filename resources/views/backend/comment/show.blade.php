@@ -45,7 +45,7 @@
                     </tr>
                     <tr>
                         <td>Comment date</td>
-                        <td>{{$comment->date}}</td>
+                        <td>{{$comment->created_at}}</td>
                     </tr>
                 </tbody>
                 </table>  

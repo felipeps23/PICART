@@ -39,11 +39,11 @@
         <div class="card-body">
             <div class="form-group">
                 <label for="iduser1">From user</label>
-                <select name="iduser1" id="iduser1" required class="form-control">
+                <select name="iduser" id="iduser" required class="form-control">
                     <option value="" disabled>Select user</option>
                     @foreach($users as $user)
                     
-                    @if($user->id == old('iduser1', $user->iduser1))
+                    @if($user->id == old('iduser', $favourite->iduser))
                     
                     <option selected value="{{ $user->id }}">{{ $user->name }}</option>
                     @else
@@ -62,7 +62,7 @@
                 <option value="" disabled>Select preset</option>
                 @foreach($presets as $preset)
                 
-                @if($preset->id == old('idpreset', $preset->idpreset))
+                @if($preset->id == old('idpreset', $favourite->idpreset))
                 
                 <option selected value="{{ $preset->id }}">{{ $preset->name }}</option>
                 @else

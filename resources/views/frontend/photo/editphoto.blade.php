@@ -81,13 +81,32 @@
                                  <!--    <h5>Click or drag the photo here</h5>-->
                                  <!--    <input type="file" accept="image/*" onchange="loadFile(event)" class="fileout">-->
                                  <!--</div>-->
+                                 
+                                  <div class="form-group" style="display:none;">
+                                        <label for="iduser">User</label>
+                                        <select name="iduser" id="iduser" required class="form-control">
+                                            <option value="" disabled>Select user</option>
+                                            @foreach($users as $user)
+                                            
+                                            @if($user->id == old('iduser', $photo->iduser))
+                                            
+                                            <option selected value="{{ $user->id }}">{{ $user->name }}</option>
+                                            @else
+                                                <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                            @endif
+                                            
+                                            @endforeach
+                                        </select>
+                                      
+                                    
+                                    </div>
                                
                                 <label for="idpreset">Preset</label>
                                <select class="custom-select w-100" name="idpreset" id="idpreset" required="">
                                    <option value="" disabled>Select preset</option>
                                         @foreach($presets as $preset)
                                         
-                                        @if($preset->id == old('idpreset', $preset->idpreset))
+                                        @if($preset->id == old('idpreset', $photo->idpreset))
                                         
                                         <option selected value="{{ $preset->idpreset }}">{{ $preset->name }}</option>
                                         @else
@@ -119,13 +138,13 @@
                                        <input id="focal" type="text" class="form-control " name="focal" value="{{ old('focal', $photo->focal) }}" required="" >
                                    </div>
                                 </div>
-                               
-                              
-                               <label for="type">Type</label>
-                               <select class="custom-select w-100" name="type" id="type">
+
+                                <label for="type">Type</label>
+                                <select name="type" id="type" required class="custom-select w-100">
+                                    <option value="" disabled>Select type</option>
                                     
                                     @if($photo->type == old('type', $photo->type))
-        
+                                    
                                     <option selected value="{{ $photo->type }}">{{ $photo->type }}</option>
                                         <option value="Abstract">Abstract</option>
                                         <option value="Artistic">Artistic</option>
@@ -145,13 +164,10 @@
                                     @endif
                                     
                                 </select>
-                               
-                                
-                                    <div class="button-form">
-                                         <button type="submit">
-                                    Edit
-                                </button>
-                                    </div>
+                            
+                                <div class="button-form">
+                                     <button type="submit">Edit</button>
+                                </div>
                                
                                 
                            </form>

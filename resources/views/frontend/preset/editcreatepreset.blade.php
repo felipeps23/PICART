@@ -68,7 +68,7 @@
                     </div>
                     <div class="col-12 col-createphoto">
                        <div class="form-createphoto">
-                           <form role="form" action="{{ url('/home/mypresets/updatecreate/' . $preset->id) }}" method="post" id="createPresetForm" enctype="multipart/form-data">
+                           <form role="form" action="{{ url('/mypresets/preset/updatecreate/' . $preset->id) }}" method="post" id="createPresetForm" enctype="multipart/form-data">
                               @csrf
                               @method('put')
                                <h1>Add Preset</h1>

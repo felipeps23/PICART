@@ -85,7 +85,7 @@
                            <p>{{ $purchase->pname }}</p>
                            <p>{{ $purchase->nickname }}</p>
                            <p>{{ $purchase->price }} €</p>
-                           <div class="p-end"> <a class="enlace-end">Download Again</a></div>
+                           <div class="p-end"> <a href="logos/{{ $purchase->idpreset }}.zip" class="enlace-end">Download Again</a></div>
                           
                            
                        </div>

@@ -77,18 +77,23 @@
                        </div>
                        <div class="article-cart">
                            <p class="p-start"><a href="#">X</a></p>
-                           <div class="img-cart"><img src="{{url('/assets/frontend/images/preset1.jpg')}}"></img></div>
-                           <p>25 €</p>
-                           <p class="p-end">25 €</p>
+                           <div class="img-cart"><img src="data:image/png;base64,{{ $preset->photo }}"></img></div>
+                           <p>{{ $preset->price }} €</p>
+                           <p class="p-end">{{ $preset->price }} €</p>
                            
                        </div>
                     </div>
                     <div class="col-4">
                         <div class="features">
                             <h2>Cart total</h2>
-                            <div class="carct"><h3>Name</h3> <h4>name preset</h4></div>
-                            <div class="carct carctend"><h3>Price</h3> <h4>25 €</h4></div>
-                            <a href="" class="buy-cart">Proceed and buy</a>
+                            <div class="carct"><h3>Name</h3> <h4>{{ $preset->name }}</h4></div>
+                            <div class="carct carctend"><h3>Price</h3> <h4>{{ $preset->price }} €</h4></div>
+                            <form role="form" action="{{ url('buy/' . $preset->id) }}" method="post" id="createPurchaseForm" enctype="multipart/form-data">
+                                @csrf
+                                <input type="text" maxlength="1000" minlength="1" required class="form-control" id="iduser" placeholder="iduser" name="iduser" value="{{ Auth::user()->id }}" style="display:none">
+                                <input type="text" maxlength="1000" minlength="1" required class="form-control" id="idpreset" placeholder="idpreset" name="idpreset" value="{{ $preset->id }}" style="display:none">
+                                <button class="buy-cart" style="border:0px;" type="submit">Proceed and buy</button>
+                            </form>
                         </div>
                     </div>
                     

@@ -43,7 +43,7 @@
                     <option value="" disabled>Select user</option>
                     @foreach($users as $user)
                     
-                    @if($user->id == old('iduser', $user->iduser))
+                    @if($user->id == old('iduser', $comment->iduser))
                     
                     <option selected value="{{ $user->id }}">{{ $user->name }}</option>
                     @else
@@ -61,7 +61,7 @@
                     <option value="" disabled>Select photo</option>
                     @foreach($photos as $photo)
                     
-                    @if($photo->id == old('idphoto', $photo->idphoto))
+                    @if($photo->id == old('idphoto', $comment->idphoto))
                     
                     <option selected value="{{ $photo->id }}">{{ $photo->id }}</option>
                     @else
@@ -76,10 +76,6 @@
             <div class="form-group">
                 <label for="description">Description</label>
                 <textarea minlength="10" class="form-control" name="description" id="description" placeholder="Description">{{ old('description', $comment->description) }}</textarea>
-            </div>
-            <div class="form-group">
-                <label for="date">Date</label>
-                <input type="date" required class="form-control" id="date" name="date" value="{{ old('date', $comment->date) }}">
             </div>
         </div>
         <!-- /.card-body -->

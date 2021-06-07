@@ -44,7 +44,7 @@
                 <option value="" disabled>Select user</option>
                 @foreach($users as $user)
                 
-                @if($user->id == old('iduser', $user->iduser))
+                @if($user->id == old('iduser', $like->iduser))
                 
                 <option selected value="{{ $user->id }}">{{ $user->name }}</option>
                 @else
@@ -63,7 +63,7 @@
                 <option value="" disabled>Select photo</option>
                 @foreach($photos as $photo)
                 
-                @if($photo->id == old('idphoto', $photo->idphoto))
+                @if($photo->id == old('idphoto', $like->idphoto))
                 
                 <option selected value="{{ $photo->id }}">{{ $photo->id }}</option>
                 @else

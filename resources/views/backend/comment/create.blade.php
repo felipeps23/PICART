@@ -76,10 +76,6 @@
                 <label for="description">Description</label>
                 <textarea minlength="10" class="form-control" name="description" id="description" placeholder="Description">{{ old('description') }}</textarea>
             </div>
-            <div class="form-group">
-                <label for="date">Date</label>
-                <input type="date" required class="form-control" id="date" name="date" value="{{ old('date') }}">
-            </div>
         </div>
         <!-- /.card-body -->
         <div class="card-body">

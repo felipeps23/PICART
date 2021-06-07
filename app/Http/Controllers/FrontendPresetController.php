@@ -66,7 +66,7 @@ class FrontendPresetController extends Controller
         }
         if($presets->id > 0) {
             $response = ['op' => 'Create', 'r' => $result, 'id' => $presets->id];
-            return redirect('/mypresets')->with($response);
+            return redirect('mypresets/preset/' . $presets->id .'/editcreate')->with($response);
         } else {
             return back()->withInput()->with(['error' => 'algo ha fallado']);
         }
@@ -86,7 +86,7 @@ class FrontendPresetController extends Controller
     public function showpreset(User $user, $id)
     {
         $preset = Preset::find($id);
-        $valuations = DB::select("select * from presets, valuations, users where presets.id = valuations.idpreset and valuations.idpreset = $id and valuations.iduser = users.id");
+        $valuations = DB::select("select presets.id, presets.iduser, presets.name, presets.description, presets.photo, presets.file, presets.price, presets.created_at, valuations.id as idvaluation, valuations.iduser, valuations.idpreset, valuations.text_valuation, valuations.valuation, valuations.created_at, users.nickname, users.id from presets, valuations, users where presets.id = valuations.idpreset and valuations.idpreset = $id and valuations.iduser = users.id");
         $iduserid = auth()->user()->id;
         $presetfavourites = DB::select("select * from presets, favourites WHERE favourites.idpreset = presets.id and presets.id = $id and favourites.iduser = $iduserid");
         //dd($contact);
@@ -169,7 +169,7 @@ class FrontendPresetController extends Controller
         }
         if($result) {
             $response = ['op' => 'Update', 'r' => $result, 'id' => $preset->id];
-            return redirect('backend/preset')->with($response);
+            return redirect('/mypresets')->with($response);
         } else {
             return back()->withInput()->with(['error' => 'Algo ha fallado']);
         }
@@ -210,15 +210,44 @@ class FrontendPresetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Preset $preset){
-        $id = $preset->id;
-         $deleted = $this->deleteFiles($id);
+     
+    // public function destroy(Preset $preset){
+    //     $id = $preset->id;
+    //      $deleted = $this->deleteFiles($id);
+    //     try {
+    //         $result = $preset->delete();
+    //     } catch(\Exception $e) {
+    //         $result = 0;
+    //     }
+    //     $response = ['op' => 'Destroy', 'r' => $result, 'id' => $id];
+    //     return redirect('backend/preset')->with($response);
+    // }
+    
+    public function destroy($id)
+    {
+        $preset = Preset::find($id);
+       $id = $preset->id;
         try {
             $result = $preset->delete();
         } catch(\Exception $e) {
             $result = 0;
+
         }
         $response = ['op' => 'Destroy', 'r' => $result, 'id' => $id];
-        return redirect('backend/preset')->with($response);
+        return redirect('/preset');
+    }
+    
+    public function destroyValuation($id)
+    {
+        $valuation = Valuation::find($id);
+        $id = $valuation->id;
+        try {
+            $result = $valuation->delete();
+        } catch(\Exception $e) {
+            $result = 0;
+
+        }
+        $response = ['op' => 'Destroy', 'r' => $result, 'id' => $id];
+        return back();
     }
 }

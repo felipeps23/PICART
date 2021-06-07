@@ -43,7 +43,7 @@
                 <option value="" disabled>Select user</option>
                 @foreach($users as $user)
                 
-                @if($user->id == old('iduser', $user->iduser))
+                @if($user->id == old('iduser', $purchase->iduser))
                 
                 <option selected value="{{ $user->id }}">{{ $user->name }}</option>
                 @else
@@ -62,7 +62,7 @@
                 <option value="" disabled>Select preset</option>
                 @foreach($presets as $preset)
                 
-                @if($preset->id == old('idpreset', $preset->idpreset))
+                @if($preset->id == old('idpreset', $purchase->idpreset))
                 
                 <option selected value="{{ $preset->id }}">{{ $preset->name }}</option>
                 @else
@@ -72,11 +72,6 @@
                 @endforeach
             </select>
             
-        </div>
-        
-        <div class="form-group">
-            <label for="date">Date</label>
-            <input type="date" required class="form-control" id="date" name="date" value="{{ old('date', $purchase->date) }}">
         </div>
         
         <!-- /.card-body -->

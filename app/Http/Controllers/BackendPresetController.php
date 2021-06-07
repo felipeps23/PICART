@@ -17,7 +17,7 @@ class BackendPresetController extends Controller
     {
         $order = ['id', 'iduser', 'name', 'description', 'photo', 'file', 'price'];
         $presets = new Preset();
-        $rows = 10;
+        $rows = 200;
         if($request->input('rows') != null && is_numeric($request->input('rows'))) {
             $rows = $request->input('rows');
         }

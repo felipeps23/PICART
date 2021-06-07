@@ -45,7 +45,7 @@
                 <option value="" disabled>Select user</option>
                 @foreach($users as $user)
                 
-                @if($user->id == old('iduser', $user->iduser))
+                @if($user->id == old('iduser', $preset->iduser))
                 
                 <option selected value="{{ $user->id }}">{{ $user->name }}</option>
                 @else
@@ -71,7 +71,7 @@
            <!--</div>-->
             <div class="form-group">
                 <label for="price">Price</label>
-                <input type="number" min="0.10" max="9999.99" step="0.01" required class="form-control" id="price" placeholder="Price" name="price" value="{{ old('price', $preset->price) }}">
+                <input type="number" min="0" max="9999.99" step="0.01" required class="form-control" id="price" placeholder="Price" name="price" value="{{ old('price', $preset->price) }}">
             </div>
         </div>
         <!-- /.card-body -->
