@@ -12,6 +12,7 @@
     <!-- CSS de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="{{url('/assets/frontend/css/style.css')}}" rel="stylesheet">
+    <link rel="shortcut icon" type="png" href="{{ url('/assets/logo.png') }}" />
     <!-- 1. Add latest jQuery and fancybox files -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     

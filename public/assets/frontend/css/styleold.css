@@ -1,0 +1,4760 @@
+@charset "UTF-8";
+/*
+Theme Name: PicArt
+Author: Sergio y Felipe
+Author URI: https://sidn.es
+Version: 1.0.0
+*/
+/** MÁS IMPORTACIONES AL FINAL DE LA PÁGINA **/
+/** FONTS **/
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/** COLORES **/
+/** RESOLUCIONES **/
+/** MODULOS **/
+/******************************************************************
+GENERALES
+*******************************************************************/
+/** PÁGINAS **/
+html,
+body {
+  margin: 0 !important;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; }
+
+#home-picart .section-home {
+  width: 100%;
+  height: 100vh; }
+  #home-picart .section-home .line-top {
+    position: absolute;
+    width: 1px;
+    height: 100px;
+    border-right: 1px solid black;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+  #home-picart .section-home .line-bottom {
+    position: absolute;
+    width: 1px;
+    height: 200px;
+    border-right: 1px solid black;
+    left: 0;
+    right: 0;
+    bottom: -100px;
+    z-index: 9997;
+    margin: auto; }
+  #home-picart .section-home .line-left {
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    border-top: 1px solid black;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto; }
+  #home-picart .section-home .line-right {
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    border-top: 1px solid black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+  #home-picart .section-home .img-home {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    min-width: 500px;
+    width: 30%;
+    height: 70%;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    z-index: -9999;
+    display: flex;
+    align-items: flex-end; }
+    #home-picart .section-home .img-home h3 {
+      margin-left: 20px;
+      font-size: .7em;
+      font-family: Lato;
+      letter-spacing: 3px;
+      margin-bottom: -20px; }
+    #home-picart .section-home .img-home video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    #home-picart .section-home .img-home .filter-white {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #ffffff5d; }
+  #home-picart .section-home .nav-home {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 9999; }
+    #home-picart .section-home .nav-home h1 {
+      position: absolute;
+      left: 51px;
+      top: 50px;
+      margin: 0;
+      padding: 0;
+      font-size: 9em;
+      font-weight: 600;
+      color: #f3f3f3a1 !important;
+      z-index: 996; }
+    #home-picart .section-home .nav-home ul {
+      align-self: flex-end;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      list-style: none;
+      font-family: "Lato";
+      margin-top: 40px;
+      margin-right: 60px; }
+      #home-picart .section-home .nav-home ul li {
+        position: relative;
+        transition: .5s; }
+        #home-picart .section-home .nav-home ul li ul {
+          display: none;
+          width: 200px;
+          transition: .5s; }
+          #home-picart .section-home .nav-home ul li ul li {
+            background: #000000da;
+            padding: 12px 0 12px 15px; }
+            #home-picart .section-home .nav-home ul li ul li svg {
+              width: 12px;
+              color: #a5a5a5;
+              transition: .5s; }
+          #home-picart .section-home .nav-home ul li ul a {
+            color: white;
+            font-size: 1em;
+            padding-left: 10px !important;
+            font-weight: 300;
+            transition: .5s; }
+          #home-picart .section-home .nav-home ul li ul:hover {
+            display: block !important;
+            position: absolute;
+            margin: -10px 0 0 -30px;
+            left: 0px;
+            transition: .5s; }
+        #home-picart .section-home .nav-home ul li:hover > ul {
+          display: block !important;
+          position: absolute;
+          margin: 0px 0 0 -30px;
+          padding-top: 10px;
+          left: 0px;
+          z-index: 9960;
+          transition: .5s; }
+        #home-picart .section-home .nav-home ul li .menuitem {
+          padding-right: 25px;
+          font-weight: 500;
+          transition: .5s; }
+          #home-picart .section-home .nav-home ul li .menuitem::after {
+            content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+            width: 30px;
+            height: 30px;
+            bottom: -5px;
+            right: -10px;
+            position: absolute; }
+        #home-picart .section-home .nav-home ul li a {
+          color: #000000;
+          font-size: 1.1em;
+          padding: 0 20px;
+          font-weight: 300;
+          transition: .5s; }
+          #home-picart .section-home .nav-home ul li a:hover {
+            text-decoration: none;
+            color: grey;
+            transition: .5s; }
+        #home-picart .section-home .nav-home ul li .sign {
+          background: #050505;
+          font-family: Lato;
+          padding: 8px 20px;
+          font-size: 1em;
+          margin-right: 10px;
+          color: #f3f3f3; }
+  #home-picart .section-home .contain-home {
+    display: flex;
+    height: 90%; }
+    #home-picart .section-home .contain-home .text-home {
+      width: 55%;
+      display: flex;
+      justify-content: flex-end; }
+      #home-picart .section-home .contain-home .text-home h1 {
+        width: 100%;
+        max-width: 920px;
+        color: #000000;
+        font-size: 160px;
+        font-weight: 400;
+        padding-left: 50px; }
+    #home-picart .section-home .contain-home .banner-home {
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end; }
+      #home-picart .section-home .contain-home .banner-home .container-home-img-1 {
+        width: 300px;
+        height: 75%;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        margin-left: 30px;
+        z-index: 9995; }
+      #home-picart .section-home .contain-home .banner-home .container-home-img-2 {
+        width: 300px;
+        height: 75%;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        margin-left: 75px;
+        margin-bottom: 150px;
+        position: relative; }
+        #home-picart .section-home .contain-home .banner-home .container-home-img-2 h3 {
+          margin-left: -75px;
+          margin-top: 70px;
+          position: absolute;
+          font-size: .7em;
+          font-family: Lato;
+          letter-spacing: 3px;
+          -webkit-transform: rotate(-90deg); }
+    #home-picart .section-home .contain-home .picart {
+      position: absolute;
+      bottom: -40px;
+      left: -16px;
+      margin: 0;
+      padding: 0;
+      font-size: 13em;
+      font-weight: 600;
+      color: #f3f3f3a1 !important; }
+
+#home-picart .section-place {
+  padding: 200px 0;
+  background: #f3f3f3a1;
+  position: relative; }
+  #home-picart .section-place .row-place-1 .img-place {
+    width: 100%;
+    height: 550px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; }
+  #home-picart .section-place .row-place-1 span {
+    margin-left: 25px;
+    font-size: .7em;
+    font-family: Lato;
+    letter-spacing: 3px; }
+  #home-picart .section-place .row-place-1 h2 {
+    font-family: Raleway;
+    font-size: 4.5em;
+    width: 415px;
+    margin-left: -164px;
+    font-weight: 500;
+    margin-top: 50px; }
+  #home-picart .section-place .row-upload {
+    padding-top: 100px; }
+    #home-picart .section-place .row-upload .upload-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+    #home-picart .section-place .row-upload .text-upload {
+      width: 500px; }
+      #home-picart .section-place .row-upload .text-upload p {
+        text-align: justify;
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 500;
+        margin-bottom: 30px; }
+      #home-picart .section-place .row-upload .text-upload a {
+        align-self: flex-start;
+        background: #050505;
+        font-family: Lato;
+        padding: 10px 35px;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: #f3f3f3; }
+  #home-picart .section-place .ideas {
+    position: absolute;
+    right: 0px;
+    bottom: 200px; }
+    #home-picart .section-place .ideas h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 13em !important;
+      font-weight: 600 !important;
+      color: #8989890c !important; }
+
+#home-picart .section-account {
+  padding: 100px 0;
+  background: #f3f3f3a1;
+  position: relative; }
+  #home-picart .section-account .account {
+    position: absolute;
+    left: 30px;
+    top: 250px; }
+    #home-picart .section-account .account h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 13em !important;
+      font-weight: 600 !important;
+      color: #8989890c !important; }
+  #home-picart .section-account .row-account-1 h2 {
+    font-family: Raleway;
+    font-size: 4.5em;
+    font-weight: 500;
+    margin-top: 50px; }
+  #home-picart .section-account .row-account-1 .img-account {
+    width: 100%;
+    height: 650px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; }
+  #home-picart .section-account .row-account-1 ul {
+    list-style: "\279E";
+    padding-left: 15px;
+    margin: 30px 0;
+    width: 350px; }
+    #home-picart .section-account .row-account-1 ul li {
+      text-align: justify;
+      padding-left: 8px;
+      margin: 10px 0; }
+  #home-picart .section-account .row-account-1 a {
+    background: #050505;
+    font-family: Lato;
+    padding: 10px 35px;
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: #f3f3f3;
+    font-weight: 300; }
+
+#home-picart .section-preset {
+  padding: 200px 0;
+  background: #f3f3f3a1;
+  position: relative; }
+  #home-picart .section-preset .preset {
+    position: absolute;
+    right: 20px;
+    bottom: 200px;
+    z-index: 9999; }
+    #home-picart .section-preset .preset h2 {
+      margin: 0;
+      width: 100%;
+      padding: 0;
+      font-size: 13em !important;
+      font-weight: 600 !important;
+      color: #8989890c !important; }
+  #home-picart .section-preset .col-preset {
+    display: flex;
+    flex-direction: row; }
+  #home-picart .section-preset .img-preset {
+    width: 50%;
+    height: 600px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    display: flex;
+    align-items: flex-end;
+    position: relative; }
+    #home-picart .section-preset .img-preset h3 {
+      font-family: Lato;
+      font-size: 1.1em;
+      letter-spacing: 2px;
+      color: #f3f3f3;
+      margin: 0 0 10px 10px; }
+    #home-picart .section-preset .img-preset h4 {
+      bottom: 0;
+      left: 0;
+      margin-left: -180px;
+      margin-bottom: 176px;
+      position: absolute;
+      font-size: .7em;
+      font-family: Lato;
+      letter-spacing: 3px;
+      -webkit-transform: rotate(-90deg); }
+  #home-picart .section-preset .img-preset-2 {
+    width: 50%;
+    height: 600px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    margin-top: 200px;
+    margin-left: -100px;
+    display: flex;
+    align-items: flex-end;
+    z-index: 999; }
+    #home-picart .section-preset .img-preset-2 h3 {
+      font-family: Lato;
+      font-size: 1.1em;
+      letter-spacing: 2px;
+      color: #f3f3f3;
+      margin: 0 0 10px 10px; }
+  #home-picart .section-preset h2 {
+    font-family: Raleway;
+    font-size: 4.5em;
+    width: 560px;
+    margin-left: -300px;
+    font-weight: 500; }
+  #home-picart .section-preset p {
+    margin-top: 100px;
+    text-align: justify;
+    font-family: Raleway;
+    letter-spacing: 1px;
+    line-height: 176%;
+    font-weight: 500;
+    width: 350px;
+    margin-left: -50px;
+    margin-bottom: 30px; }
+  #home-picart .section-preset a {
+    background: #050505;
+    font-family: Lato;
+    padding: 10px 35px;
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: #f3f3f3;
+    margin-left: -50px;
+    font-weight: 300; }
+
+#home-picart footer {
+  background: #000000;
+  padding: 80px 0; }
+  #home-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #home-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #home-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #home-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #home-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #home-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #home-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #home-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+#home-picart .video {
+  min-width: 500px;
+  width: 30%;
+  height: 70%;
+  position: relative; }
+  #home-picart .video video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+#feed-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #feed-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #feed-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #feed-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #feed-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #feed-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #feed-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #feed-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #feed-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #feed-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #feed-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #feed-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #feed-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #feed-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #feed-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#feed-picart .section-gallery {
+  padding-top: 100px; }
+  #feed-picart .section-gallery h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px; }
+  #feed-picart .section-gallery .gallery-feed {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center; }
+    #feed-picart .section-gallery .gallery-feed .item {
+      width: 25%;
+      padding: 20px; }
+      #feed-picart .section-gallery .gallery-feed .item img {
+        width: 100%;
+        transition: .5s; }
+        #feed-picart .section-gallery .gallery-feed .item img:hover {
+          opacity: 0.7; }
+      #feed-picart .section-gallery .gallery-feed .item .user-see {
+        display: flex;
+        flex-direction: wrap;
+        justify-content: space-between; }
+        #feed-picart .section-gallery .gallery-feed .item .user-see h5 {
+          font-size: .7em;
+          font-family: Lato;
+          letter-spacing: 3px;
+          padding: 5px;
+          color: #808080; }
+        #feed-picart .section-gallery .gallery-feed .item .user-see a {
+          margin-top: -3px;
+          margin-right: 5px; }
+        #feed-picart .section-gallery .gallery-feed .item .user-see svg {
+          width: 10px;
+          color: #808080; }
+
+#feed-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #feed-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #feed-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #feed-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #feed-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #feed-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #feed-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #feed-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #feed-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+.fancybox-bg {
+  background: #f3f3f3 !important;
+  opacity: 0.8 !important; }
+
+#singlephoto-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #singlephoto-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #singlephoto-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #singlephoto-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #singlephoto-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #singlephoto-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #singlephoto-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #singlephoto-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #singlephoto-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #singlephoto-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #singlephoto-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #singlephoto-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #singlephoto-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #singlephoto-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #singlephoto-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#singlephoto-picart .section-single {
+  padding-top: 100px; }
+  #singlephoto-picart .section-single h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px;
+    margin-bottom: 100px; }
+  #singlephoto-picart .section-single .single-feed {
+    width: 100%; }
+    #singlephoto-picart .section-single .single-feed .item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      #singlephoto-picart .section-single .single-feed .item p {
+        font-size: .7em;
+        font-family: Lato;
+        letter-spacing: 3px;
+        padding: 5px;
+        margin: 0;
+        color: #808080; }
+      #singlephoto-picart .section-single .single-feed .item img {
+        max-height: 500px;
+        -webkit-box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51);
+        -moz-box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51);
+        box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51); }
+      #singlephoto-picart .section-single .single-feed .item .favorite {
+        margin-top: 10px; }
+      #singlephoto-picart .section-single .single-feed .item svg {
+        width: 25px;
+        color: #808080; }
+        #singlephoto-picart .section-single .single-feed .item svg:hover {
+          color: #CC3232; }
+  #singlephoto-picart .section-single .features {
+    background: #f3f3f3a1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 50px; }
+    #singlephoto-picart .section-single .features h2 {
+      font-family: "Raleway";
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      width: 100%;
+      text-align: center; }
+    #singlephoto-picart .section-single .features .carct {
+      display: flex;
+      width: 100%;
+      margin-bottom: 18px;
+      border-bottom: .7px solid #9F9F9F; }
+      #singlephoto-picart .section-single .features .carct h3 {
+        font-family: "Raleway";
+        font-size: 1em;
+        letter-spacing: 1px;
+        width: 50%; }
+      #singlephoto-picart .section-single .features .carct h4 {
+        font-family: "Raleway";
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: grey;
+        width: 50%; }
+    #singlephoto-picart .section-single .features .carctend {
+      border: none !important; }
+    #singlephoto-picart .section-single .features .edit-a {
+      width: 100%;
+      padding-top: 20px;
+      text-align: center; }
+      #singlephoto-picart .section-single .features .edit-a .delete-feature {
+        background-color: transparent;
+        font-family: Lato;
+        padding: 10px 35px;
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: black;
+        align-self: center;
+        font-weight: 300;
+        border: .8px solid;
+        border-color: rgba(0, 0, 0, 0.1);
+        margin-right: 15px; }
+      #singlephoto-picart .section-single .features .edit-a a {
+        background: #050505;
+        font-family: Lato;
+        padding: 10px 35px;
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: #f3f3f3;
+        align-self: center;
+        font-weight: 300;
+        border: none; }
+
+#singlephoto-picart .comment-single {
+  background: #f3f3f3a1;
+  margin: 150px 0;
+  padding: 100px 50px; }
+  #singlephoto-picart .comment-single h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Raleway;
+    font-size: 2em; }
+  #singlephoto-picart .comment-single .comment {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: wrap; }
+    #singlephoto-picart .comment-single .comment .icon-user svg {
+      background: black;
+      padding: 13px;
+      width: 50px;
+      border-radius: 25px;
+      color: white; }
+    #singlephoto-picart .comment-single .comment .text-comment {
+      margin-left: 30px;
+      padding-bottom: 10px;
+      border-bottom: .7px solid #E4E4E4;
+      width: 100%; }
+      #singlephoto-picart .comment-single .comment .text-comment h5 {
+        font-family: "Raleway";
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: grey; }
+      #singlephoto-picart .comment-single .comment .text-comment h6 {
+        font-family: "Lato";
+        font-size: .9em;
+        letter-spacing: 1px; }
+    #singlephoto-picart .comment-single .comment a {
+      width: 15px;
+      height: 15px;
+      align-self: center;
+      margin-top: -20px;
+      margin-left: 30px;
+      color: black;
+      transition: .5s; }
+      #singlephoto-picart .comment-single .comment a:hover {
+        color: grey; }
+
+#singlephoto-picart .comment-form .col-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+#singlephoto-picart .comment-form h1 {
+  font-family: Raleway;
+  font-size: 2em;
+  font-weight: 500; }
+
+#singlephoto-picart .comment-form form {
+  width: 60%;
+  margin-top: 20px; }
+  #singlephoto-picart .comment-form form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #7c7c7c;
+    height: 100px; }
+  #singlephoto-picart .comment-form form input {
+    background: #050505;
+    font-family: Lato;
+    padding: 10px 35px;
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: #f3f3f3;
+    margin-top: 20px;
+    font-weight: 300; }
+
+#singlephoto-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #singlephoto-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #singlephoto-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #singlephoto-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #singlephoto-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #singlephoto-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #singlephoto-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #singlephoto-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #singlephoto-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+#preset-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #preset-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #preset-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #preset-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #preset-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #preset-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #preset-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #preset-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #preset-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #preset-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #preset-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #preset-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #preset-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #preset-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #preset-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#preset-picart .container-preset {
+  padding-top: 100px; }
+  #preset-picart .container-preset h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px; }
+  #preset-picart .container-preset .gallery-preset {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center; }
+    #preset-picart .container-preset .gallery-preset .item {
+      width: 30%;
+      padding: 20px;
+      position: relative; }
+      #preset-picart .container-preset .gallery-preset .item .buy-preset {
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        transition: .5s; }
+        #preset-picart .container-preset .gallery-preset .item .buy-preset a {
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          font-family: "Raleway";
+          font-size: 1.2em;
+          letter-spacing: 1px;
+          color: black;
+          font-weight: 500;
+          padding: 20px 0;
+          background: #ffffff9a; }
+        #preset-picart .container-preset .gallery-preset .item .buy-preset:hover {
+          opacity: 1; }
+      #preset-picart .container-preset .gallery-preset .item img {
+        width: 100%;
+        transition: .5s; }
+      #preset-picart .container-preset .gallery-preset .item .preset-date {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        #preset-picart .container-preset .gallery-preset .item .preset-date h5 {
+          font-size: .7em;
+          font-family: Lato;
+          letter-spacing: 3px;
+          padding: 5px;
+          color: #808080;
+          margin: 0; }
+      #preset-picart .container-preset .gallery-preset .item .user-see {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        #preset-picart .container-preset .gallery-preset .item .user-see h5 {
+          font-size: .7em;
+          font-family: Lato;
+          letter-spacing: 3px;
+          padding: 4px 5px;
+          color: #808080;
+          margin: 0; }
+        #preset-picart .container-preset .gallery-preset .item .user-see h4 {
+          font-size: .9em;
+          font-family: Lato;
+          letter-spacing: 3px;
+          margin: 0;
+          color: black;
+          padding: 4px 5px; }
+        #preset-picart .container-preset .gallery-preset .item .user-see h3 {
+          font-family: "Raleway";
+          font-size: 1.2em;
+          letter-spacing: 1px;
+          padding: 5px 5px;
+          font-weight: 600; }
+
+#preset-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #preset-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #preset-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #preset-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #preset-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #preset-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #preset-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #preset-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #preset-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+.fancybox-bg {
+  background: #f3f3f3 !important;
+  opacity: 0.8 !important; }
+
+#singlepreset-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #singlepreset-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #singlepreset-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #singlepreset-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #singlepreset-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #singlepreset-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #singlepreset-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #singlepreset-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #singlepreset-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #singlepreset-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #singlepreset-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #singlepreset-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #singlepreset-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #singlepreset-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #singlepreset-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#singlepreset-picart .section-single {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  #singlepreset-picart .section-single h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px;
+    margin-bottom: 100px; }
+  #singlepreset-picart .section-single .single-feed {
+    width: 100%; }
+    #singlepreset-picart .section-single .single-feed .item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      #singlepreset-picart .section-single .single-feed .item p {
+        font-size: .7em;
+        font-family: Lato;
+        letter-spacing: 3px;
+        padding: 5px;
+        margin: 0;
+        color: #808080; }
+      #singlepreset-picart .section-single .single-feed .item img {
+        max-height: 500px;
+        max-width: 600px;
+        -webkit-box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51);
+        -moz-box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51);
+        box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51); }
+      #singlepreset-picart .section-single .single-feed .item .save {
+        margin-top: 10px; }
+      #singlepreset-picart .section-single .single-feed .item svg {
+        width: 20px;
+        color: #808080; }
+        #singlepreset-picart .section-single .single-feed .item svg:hover {
+          color: black; }
+  #singlepreset-picart .section-single .features {
+    background: #f3f3f3a1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px 50px; }
+    #singlepreset-picart .section-single .features .buy-cart {
+      background: #050505;
+      font-family: Lato;
+      padding: 10px 35px;
+      margin: 10px 0 0 0;
+      font-size: 1em;
+      letter-spacing: 2px;
+      color: #f3f3f3;
+      align-self: center;
+      font-weight: 300; }
+    #singlepreset-picart .section-single .features h2 {
+      font-family: "Raleway";
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      width: 100%;
+      text-align: center; }
+    #singlepreset-picart .section-single .features .carct {
+      display: flex;
+      width: 100%;
+      margin-bottom: 18px;
+      border-bottom: .7px solid #9F9F9F; }
+      #singlepreset-picart .section-single .features .carct h3 {
+        font-family: "Raleway";
+        font-size: 1em;
+        letter-spacing: 1px;
+        width: 50%; }
+      #singlepreset-picart .section-single .features .carct h4 {
+        font-family: "Raleway";
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: grey;
+        width: 50%; }
+    #singlepreset-picart .section-single .features .carctend {
+      border: none !important; }
+    #singlepreset-picart .section-single .features .edit-a {
+      width: 100%;
+      padding-top: 20px;
+      text-align: center; }
+      #singlepreset-picart .section-single .features .edit-a .delete-feature {
+        background-color: transparent;
+        font-family: Lato;
+        padding: 10px 35px;
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: black;
+        align-self: center;
+        font-weight: 300;
+        border: .8px solid;
+        border-color: rgba(0, 0, 0, 0.1);
+        margin-right: 15px; }
+      #singlepreset-picart .section-single .features .edit-a a {
+        background: #050505;
+        font-family: Lato;
+        padding: 10px 35px;
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: #f3f3f3;
+        align-self: center;
+        font-weight: 300;
+        border: none; }
+
+#singlepreset-picart .comment-single {
+  background: #f3f3f3a1;
+  margin: 150px 0;
+  padding: 100px 50px; }
+  #singlepreset-picart .comment-single h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Raleway;
+    font-size: 2em; }
+  #singlepreset-picart .comment-single .comment {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: wrap; }
+    #singlepreset-picart .comment-single .comment .star .checked {
+      color: orange; }
+    #singlepreset-picart .comment-single .comment .icon-user svg {
+      background: black;
+      padding: 13px;
+      width: 50px;
+      border-radius: 25px;
+      color: white; }
+    #singlepreset-picart .comment-single .comment .text-comment {
+      margin-left: 30px;
+      padding-bottom: 10px;
+      border-bottom: .7px solid #E4E4E4;
+      width: 100%; }
+      #singlepreset-picart .comment-single .comment .text-comment h5 {
+        font-family: "Raleway";
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: grey; }
+      #singlepreset-picart .comment-single .comment .text-comment h6 {
+        font-family: "Lato";
+        font-size: .9em;
+        letter-spacing: 1px; }
+    #singlepreset-picart .comment-single .comment a {
+      width: 15px;
+      height: 15px;
+      align-self: center;
+      margin-top: -20px;
+      margin-left: 30px;
+      color: black;
+      transition: .5s; }
+      #singlepreset-picart .comment-single .comment a:hover {
+        color: grey; }
+
+#singlepreset-picart .comment-form .col-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+
+#singlepreset-picart .comment-form h1 {
+  font-family: Raleway;
+  font-size: 2em;
+  font-weight: 500; }
+
+#singlepreset-picart .comment-form form {
+  width: 60%;
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #singlepreset-picart .comment-form form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #7c7c7c;
+    height: 100px;
+    z-index: 999;
+    position: relative; }
+  #singlepreset-picart .comment-form form input {
+    background: #050505;
+    font-family: Lato;
+    padding: 10px 35px;
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: #f3f3f3;
+    margin-top: 20px;
+    font-weight: 300;
+    align-self: flex-start; }
+
+#singlepreset-picart .comment-form .rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px; }
+
+#singlepreset-picart .comment-form .rate:not(:checked) > input {
+  position: absolute;
+  top: 50px; }
+
+#singlepreset-picart .comment-form .rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc; }
+
+#singlepreset-picart .comment-form .rate:not(:checked) > label:before {
+  content: '★ '; }
+
+#singlepreset-picart .comment-form .rate > input:checked ~ label {
+  color: orange; }
+
+#singlepreset-picart .comment-form .rate:not(:checked) > label:hover,
+#singlepreset-picart .comment-form .rate:not(:checked) > label:hover ~ label {
+  color: #ffbc3e; }
+
+#singlepreset-picart .comment-form .rate > input:checked + label:hover,
+#singlepreset-picart .comment-form .rate > input:checked + label:hover ~ label,
+#singlepreset-picart .comment-form .rate > input:checked ~ label:hover,
+#singlepreset-picart .comment-form .rate > input:checked ~ label:hover ~ label,
+#singlepreset-picart .comment-form .rate > label:hover ~ input:checked ~ label {
+  color: orange; }
+
+#singlepreset-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #singlepreset-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #singlepreset-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #singlepreset-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #singlepreset-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #singlepreset-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #singlepreset-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #singlepreset-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #singlepreset-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+#cart-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #cart-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #cart-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #cart-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #cart-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #cart-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #cart-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #cart-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #cart-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #cart-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #cart-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #cart-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #cart-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #cart-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #cart-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#cart-picart .col-cart {
+  padding: 0 50px; }
+
+#cart-picart .section-single {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  #cart-picart .section-single h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px;
+    margin-bottom: 100px; }
+  #cart-picart .section-single .article-cart-title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 30px 50px; }
+    #cart-picart .section-single .article-cart-title .p-start {
+      width: 10% !important; }
+    #cart-picart .section-single .article-cart-title p {
+      width: 25%;
+      font-family: "Raleway";
+      font-size: 1em;
+      letter-spacing: 1px;
+      font-weight: 500; }
+    #cart-picart .section-single .article-cart-title .p-end {
+      width: 40%;
+      text-align: right; }
+  #cart-picart .section-single .article-cart {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 50px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey; }
+    #cart-picart .section-single .article-cart .p-start {
+      width: 10% !important; }
+      #cart-picart .section-single .article-cart .p-start a {
+        color: grey; }
+    #cart-picart .section-single .article-cart .img-cart {
+      width: 25%; }
+      #cart-picart .section-single .article-cart .img-cart img {
+        max-height: 100px;
+        max-width: 130px; }
+    #cart-picart .section-single .article-cart p {
+      width: 25%;
+      font-family: "Raleway";
+      font-size: 1em;
+      color: grey;
+      letter-spacing: 1px;
+      margin: 0; }
+    #cart-picart .section-single .article-cart .p-end {
+      width: 40%;
+      text-align: right;
+      color: grey;
+      font-weight: 600; }
+  #cart-picart .section-single .features {
+    background: #f3f3f3a1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px 50px; }
+    #cart-picart .section-single .features .buy-cart {
+      background: #050505;
+      font-family: Lato;
+      padding: 10px 35px;
+      margin: 10px 0 0 0;
+      font-size: 1em;
+      letter-spacing: 2px;
+      color: #f3f3f3;
+      align-self: center;
+      font-weight: 300; }
+    #cart-picart .section-single .features h2 {
+      font-family: "Raleway";
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      width: 100%;
+      text-align: center; }
+    #cart-picart .section-single .features .carct {
+      display: flex;
+      width: 100%;
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+      border-bottom: .7px solid #9F9F9F; }
+      #cart-picart .section-single .features .carct h3 {
+        font-family: "Raleway";
+        font-size: 1em;
+        letter-spacing: 1px;
+        width: 50%; }
+      #cart-picart .section-single .features .carct h4 {
+        font-family: "Raleway";
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: grey;
+        width: 50%; }
+    #cart-picart .section-single .features .carctend {
+      border: none !important; }
+
+#cart-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #cart-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #cart-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #cart-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #cart-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #cart-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #cart-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #cart-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #cart-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+#login-picart {
+  width: 100%;
+  height: 100vh; }
+  #login-picart .nav-home {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 9999; }
+    #login-picart .nav-home h1 {
+      position: absolute;
+      left: 51px;
+      top: 50px;
+      margin: 0;
+      padding: 0;
+      font-size: 9em;
+      font-weight: 600;
+      color: #f3f3f3a1 !important;
+      z-index: 996; }
+    #login-picart .nav-home ul {
+      align-self: flex-end;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      list-style: none;
+      font-family: "Lato";
+      margin-top: 40px;
+      margin-right: 60px; }
+      #login-picart .nav-home ul li {
+        position: relative;
+        transition: .5s; }
+        #login-picart .nav-home ul li ul {
+          display: none;
+          width: 200px;
+          transition: .5s; }
+          #login-picart .nav-home ul li ul li {
+            background: #000000da;
+            padding: 12px 0 12px 15px; }
+            #login-picart .nav-home ul li ul li svg {
+              width: 12px;
+              color: #a5a5a5;
+              transition: .5s; }
+          #login-picart .nav-home ul li ul a {
+            color: white;
+            font-size: 1em;
+            padding-left: 10px !important;
+            font-weight: 300;
+            transition: .5s; }
+          #login-picart .nav-home ul li ul:hover {
+            display: block !important;
+            position: absolute;
+            margin: -10px 0 0 -30px;
+            left: 0px;
+            transition: .5s; }
+        #login-picart .nav-home ul li:hover > ul {
+          display: block !important;
+          position: absolute;
+          margin: 0px 0 0 -30px;
+          padding-top: 10px;
+          left: 0px;
+          z-index: 9960;
+          transition: .5s; }
+        #login-picart .nav-home ul li .menuitem {
+          padding-right: 25px;
+          font-weight: 500;
+          transition: .5s; }
+          #login-picart .nav-home ul li .menuitem::after {
+            content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+            width: 30px;
+            height: 30px;
+            bottom: -5px;
+            right: -10px;
+            position: absolute; }
+        #login-picart .nav-home ul li a {
+          color: #000000;
+          font-size: 1.1em;
+          padding: 0 20px;
+          font-weight: 300;
+          transition: .5s; }
+          #login-picart .nav-home ul li a:hover {
+            text-decoration: none;
+            color: grey;
+            transition: .5s; }
+        #login-picart .nav-home ul li .sign {
+          background: #050505;
+          font-family: Lato;
+          padding: 8px 20px;
+          font-size: 1em;
+          margin-right: 10px;
+          color: #f3f3f3; }
+  #login-picart .container-login {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    flex-direction: row; }
+    #login-picart .container-login .img-login {
+      width: 50%;
+      height: 100%;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important; }
+    #login-picart .container-login .login-form {
+      width: 50%;
+      height: 100%;
+      padding-top: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #login-picart .container-login .login-form form {
+        width: 500px;
+        padding: 100px 50px;
+        background: #f3f3f3a1; }
+        #login-picart .container-login .login-form form h1 {
+          font-family: "Raleway";
+          font-size: 1.5em;
+          letter-spacing: 1px;
+          margin-bottom: 40px;
+          width: 100%;
+          text-align: center; }
+        #login-picart .container-login .login-form form input {
+          background: 0 0;
+          height: auto;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 0;
+          padding: 10px 15px;
+          font: 400 15px "Raleway",sans-serif;
+          line-height: 1.4; }
+          #login-picart .container-login .login-form form input:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.05); }
+        #login-picart .container-login .login-form form label {
+          font-family: "Raleway";
+          font-size: .8em;
+          letter-spacing: 1px; }
+        #login-picart .container-login .login-form form a {
+          font-family: "Raleway";
+          font-size: .8em;
+          letter-spacing: 1px;
+          color: grey;
+          padding: 10px 0; }
+        #login-picart .container-login .login-form form .form-check {
+          padding-top: 10px; }
+          #login-picart .container-login .login-form form .form-check label {
+            font-family: "Raleway";
+            font-size: .8em;
+            letter-spacing: 1px;
+            color: grey; }
+        #login-picart .container-login .login-form form .button-form {
+          display: flex;
+          justify-content: center;
+          padding-top: 15px; }
+        #login-picart .container-login .login-form form button {
+          background: #050505;
+          font-family: Lato;
+          padding: 10px 35px;
+          margin: 10px 0 0 0;
+          font-size: 1em;
+          letter-spacing: 2px;
+          color: #f3f3f3;
+          align-self: center;
+          font-weight: 300;
+          border: none; }
+
+#register-picart {
+  width: 100%;
+  height: 100vh; }
+  #register-picart .nav-home {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 9999; }
+    #register-picart .nav-home h1 {
+      position: absolute;
+      left: 51px;
+      top: 50px;
+      margin: 0;
+      padding: 0;
+      font-size: 9em;
+      font-weight: 600;
+      color: #f3f3f3a1 !important;
+      z-index: 996; }
+    #register-picart .nav-home ul {
+      align-self: flex-end;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      list-style: none;
+      font-family: "Lato";
+      margin-top: 40px;
+      margin-right: 60px; }
+      #register-picart .nav-home ul li {
+        position: relative;
+        transition: .5s; }
+        #register-picart .nav-home ul li ul {
+          display: none;
+          width: 200px;
+          transition: .5s; }
+          #register-picart .nav-home ul li ul li {
+            background: #000000da;
+            padding: 12px 0 12px 15px; }
+            #register-picart .nav-home ul li ul li svg {
+              width: 12px;
+              color: #a5a5a5;
+              transition: .5s; }
+          #register-picart .nav-home ul li ul a {
+            color: white;
+            font-size: 1em;
+            padding-left: 10px !important;
+            font-weight: 300;
+            transition: .5s; }
+          #register-picart .nav-home ul li ul:hover {
+            display: block !important;
+            position: absolute;
+            margin: -10px 0 0 -30px;
+            left: 0px;
+            transition: .5s; }
+        #register-picart .nav-home ul li:hover > ul {
+          display: block !important;
+          position: absolute;
+          margin: 0px 0 0 -30px;
+          padding-top: 10px;
+          left: 0px;
+          z-index: 9960;
+          transition: .5s; }
+        #register-picart .nav-home ul li .menuitem {
+          padding-right: 25px;
+          font-weight: 500;
+          transition: .5s; }
+          #register-picart .nav-home ul li .menuitem::after {
+            content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+            width: 30px;
+            height: 30px;
+            bottom: -5px;
+            right: -10px;
+            position: absolute; }
+        #register-picart .nav-home ul li a {
+          color: #000000;
+          font-size: 1.1em;
+          padding: 0 20px;
+          font-weight: 300;
+          transition: .5s; }
+          #register-picart .nav-home ul li a:hover {
+            text-decoration: none;
+            color: grey;
+            transition: .5s; }
+        #register-picart .nav-home ul li .sign {
+          background: #050505;
+          font-family: Lato;
+          padding: 8px 20px;
+          font-size: 1em;
+          margin-right: 10px;
+          color: #f3f3f3; }
+  #register-picart .container-login {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    flex-direction: row; }
+    #register-picart .container-login .img-login {
+      width: 50%;
+      height: 100%;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important; }
+    #register-picart .container-login .login-form {
+      width: 50%;
+      height: 100%;
+      padding-top: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #register-picart .container-login .login-form form {
+        width: 500px;
+        padding: 100px 50px;
+        background: #f3f3f3a1; }
+        #register-picart .container-login .login-form form h1 {
+          font-family: "Raleway";
+          font-size: 1.5em;
+          letter-spacing: 1px;
+          margin-bottom: 40px;
+          width: 100%;
+          text-align: center; }
+        #register-picart .container-login .login-form form input {
+          background: 0 0;
+          height: auto;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 0;
+          padding: 10px 15px;
+          font: 400 15px "Raleway",sans-serif;
+          line-height: 1.4; }
+          #register-picart .container-login .login-form form input:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.05); }
+        #register-picart .container-login .login-form form label {
+          font-family: "Raleway";
+          font-size: .8em;
+          letter-spacing: 1px; }
+        #register-picart .container-login .login-form form a {
+          font-family: "Raleway";
+          font-size: .8em;
+          letter-spacing: 1px;
+          color: grey;
+          padding: 10px 0; }
+        #register-picart .container-login .login-form form .form-check {
+          padding-top: 10px; }
+          #register-picart .container-login .login-form form .form-check label {
+            font-family: "Raleway";
+            font-size: .8em;
+            letter-spacing: 1px;
+            color: grey; }
+        #register-picart .container-login .login-form form .button-form {
+          display: flex;
+          justify-content: center;
+          padding-top: 15px; }
+        #register-picart .container-login .login-form form button {
+          background: #050505;
+          font-family: Lato;
+          padding: 10px 35px;
+          margin: 10px 0 0 0;
+          font-size: 1em;
+          letter-spacing: 2px;
+          color: #f3f3f3;
+          align-self: center;
+          font-weight: 300;
+          border: none; }
+
+#administration-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #administration-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #administration-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #administration-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #administration-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #administration-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #administration-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #administration-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #administration-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #administration-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #administration-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #administration-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #administration-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #administration-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #administration-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#administration-picart .section-account {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  #administration-picart .section-account h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px;
+    margin-bottom: 100px; }
+  #administration-picart .section-account .col-account {
+    display: flex;
+    justify-content: center; }
+    #administration-picart .section-account .col-account .account-container {
+      width: 800px;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center; }
+      #administration-picart .section-account .col-account .account-container .logo-account {
+        width: 60px;
+        height: 60px;
+        background: black;
+        padding: 17px;
+        border-radius: 32px;
+        margin: 0 auto;
+        margin-bottom: 20px; }
+        #administration-picart .section-account .col-account .account-container .logo-account svg {
+          color: white; }
+      #administration-picart .section-account .col-account .account-container form {
+        width: 80%;
+        padding: 40px 50px;
+        background: #f3f3f3a1;
+        margin-top: 30px; }
+        #administration-picart .section-account .col-account .account-container form h1 {
+          font-family: "Raleway";
+          font-size: 1.5em;
+          letter-spacing: 1px;
+          margin-bottom: 40px;
+          width: 100%;
+          text-align: center; }
+        #administration-picart .section-account .col-account .account-container form input {
+          background: 0 0;
+          height: auto;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          border-radius: 0;
+          padding: 10px 15px;
+          font: 400 15px "Raleway",sans-serif;
+          line-height: 1.4;
+          margin-bottom: 20px; }
+          #administration-picart .section-account .col-account .account-container form input:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.05); }
+        #administration-picart .section-account .col-account .account-container form label {
+          font-family: "Raleway";
+          font-size: .8em;
+          letter-spacing: 1px; }
+        #administration-picart .section-account .col-account .account-container form a {
+          font-family: "Raleway";
+          font-size: .8em;
+          letter-spacing: 1px;
+          color: grey;
+          padding: 10px 0; }
+        #administration-picart .section-account .col-account .account-container form .form-check {
+          padding-top: 10px; }
+          #administration-picart .section-account .col-account .account-container form .form-check label {
+            font-family: "Raleway";
+            font-size: .8em;
+            letter-spacing: 1px;
+            color: grey; }
+        #administration-picart .section-account .col-account .account-container form .button-form {
+          display: flex;
+          justify-content: center;
+          padding-top: 15px; }
+        #administration-picart .section-account .col-account .account-container form button {
+          background: #050505;
+          font-family: Lato;
+          padding: 10px 35px;
+          margin: 10px 0 0 0;
+          font-size: 1em;
+          letter-spacing: 2px;
+          color: #f3f3f3;
+          align-self: center;
+          font-weight: 300;
+          border: none; }
+  #administration-picart .section-account .grafic #vertgraph {
+    width: 378px;
+    height: 207px;
+    position: relative;
+    background: url("g_backbar.gif") no-repeat; }
+  #administration-picart .section-account .grafic #vertgraph ul {
+    width: 378px;
+    height: 207px;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  #administration-picart .section-account .grafic #vertgraph ul li {
+    position: absolute;
+    width: 28px;
+    height: 160px;
+    bottom: 34px;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: black;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    line-height: 2.5em;
+    -webkit-box-shadow: 13px 10px 14px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 13px 10px 14px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 14px -10px rgba(0, 0, 0, 0.75); }
+    #administration-picart .section-account .grafic #vertgraph ul li .img-grafic {
+      width: 66px;
+      height: 85px;
+      position: absolute;
+      bottom: -92px;
+      left: -20px; }
+      #administration-picart .section-account .grafic #vertgraph ul li .img-grafic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+  #administration-picart .section-account .grafic #vertgraph li.critical {
+    left: 24px;
+    background-position: 0px bottom !important; }
+  #administration-picart .section-account .grafic #vertgraph li.high {
+    left: 101px;
+    background-position: -28px bottom !important; }
+  #administration-picart .section-account .grafic #vertgraph li.medium {
+    left: 176px;
+    background-position: -56px bottom !important; }
+  #administration-picart .section-account .grafic #vertgraph li.low {
+    left: 251px;
+    background-position: -84px bottom !important; }
+  #administration-picart .section-account .grafic #vertgraph li.info {
+    left: 327px;
+    background-position: -112px bottom !important; }
+
+#administration-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #administration-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #administration-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #administration-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #administration-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #administration-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #administration-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #administration-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #administration-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+#myphotos-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #myphotos-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #myphotos-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #myphotos-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #myphotos-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #myphotos-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #myphotos-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #myphotos-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #myphotos-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #myphotos-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #myphotos-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #myphotos-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #myphotos-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #myphotos-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #myphotos-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#myphotos-picart .section-gallery {
+  padding-top: 100px; }
+  #myphotos-picart .section-gallery h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px; }
+  #myphotos-picart .section-gallery .col-createpreset {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px; }
+    #myphotos-picart .section-gallery .col-createpreset a {
+      background: #050505;
+      font-family: Lato;
+      padding: 10px 35px;
+      margin: 10px 0 0 0;
+      font-size: 1em;
+      letter-spacing: 2px;
+      color: #f3f3f3;
+      align-self: center;
+      font-weight: 300;
+      border: none; }
+  #myphotos-picart .section-gallery .grafic {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center; }
+    #myphotos-picart .section-gallery .grafic .content-grafic {
+      width: 100%;
+      padding: 80px 50px;
+      background: #f3f3f3a1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      #myphotos-picart .section-gallery .grafic .content-grafic h2 {
+        font-family: "Raleway";
+        font-size: 1.5em;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center; }
+    #myphotos-picart .section-gallery .grafic #vertgraph {
+      width: 378px;
+      height: 207px;
+      position: relative; }
+    #myphotos-picart .section-gallery .grafic #vertgraph ul {
+      width: 378px;
+      height: 207px;
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+    #myphotos-picart .section-gallery .grafic #vertgraph ul li {
+      position: absolute;
+      width: 28px;
+      height: 160px;
+      bottom: 34px;
+      font-family: Lato;
+      font-size: .9em;
+      padding: 0 !important;
+      margin: 0 !important;
+      background: black;
+      text-align: center;
+      font-weight: 300;
+      color: white;
+      line-height: 2.5em;
+      -webkit-box-shadow: 13px 10px 14px -10px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 13px 10px 14px -10px rgba(0, 0, 0, 0.75);
+      box-shadow: 10px 10px 14px -10px rgba(0, 0, 0, 0.75); }
+      #myphotos-picart .section-gallery .grafic #vertgraph ul li .img-grafic {
+        width: 66px;
+        height: 85px;
+        position: absolute;
+        bottom: -92px;
+        left: -20px; }
+        #myphotos-picart .section-gallery .grafic #vertgraph ul li .img-grafic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+    #myphotos-picart .section-gallery .grafic #vertgraph li.critical {
+      left: 24px;
+      background-position: 0px bottom !important; }
+    #myphotos-picart .section-gallery .grafic #vertgraph li.high {
+      left: 101px;
+      background-position: -28px bottom !important; }
+    #myphotos-picart .section-gallery .grafic #vertgraph li.medium {
+      left: 176px;
+      background-position: -56px bottom !important; }
+    #myphotos-picart .section-gallery .grafic #vertgraph li.low {
+      left: 251px;
+      background-position: -84px bottom !important; }
+    #myphotos-picart .section-gallery .grafic #vertgraph li.info {
+      left: 327px;
+      background-position: -112px bottom !important; }
+  #myphotos-picart .section-gallery .gallery-feed {
+    margin-top: 30px;
+    width: 100%;
+    padding: 80px 40px;
+    background: #f3f3f3a1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center; }
+    #myphotos-picart .section-gallery .gallery-feed .logo-account {
+      width: 60px;
+      height: 60px;
+      background: black;
+      padding: 17px;
+      border-radius: 32px;
+      margin: 0 auto;
+      margin-bottom: 20px; }
+      #myphotos-picart .section-gallery .gallery-feed .logo-account svg {
+        color: white; }
+    #myphotos-picart .section-gallery .gallery-feed h2 {
+      font-family: "Raleway";
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      width: 100%;
+      text-align: center; }
+    #myphotos-picart .section-gallery .gallery-feed .item {
+      width: 25%;
+      padding: 15px; }
+      #myphotos-picart .section-gallery .gallery-feed .item img {
+        width: 100%;
+        transition: .5s; }
+        #myphotos-picart .section-gallery .gallery-feed .item img:hover {
+          opacity: 0.7; }
+      #myphotos-picart .section-gallery .gallery-feed .item .user-see {
+        display: flex;
+        flex-direction: wrap;
+        justify-content: space-between; }
+        #myphotos-picart .section-gallery .gallery-feed .item .user-see h5 {
+          font-size: .7em;
+          font-family: Lato;
+          letter-spacing: 3px;
+          padding: 5px;
+          color: #808080; }
+        #myphotos-picart .section-gallery .gallery-feed .item .user-see a {
+          margin-top: -3px;
+          margin-right: 5px; }
+        #myphotos-picart .section-gallery .gallery-feed .item .user-see svg {
+          width: 10px;
+          color: #808080; }
+
+#myphotos-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #myphotos-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #myphotos-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #myphotos-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #myphotos-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #myphotos-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #myphotos-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #myphotos-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #myphotos-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+.fancybox-bg {
+  background: #f3f3f3 !important;
+  opacity: 0.8 !important; }
+
+#mypresets-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #mypresets-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #mypresets-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #mypresets-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #mypresets-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #mypresets-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #mypresets-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #mypresets-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #mypresets-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #mypresets-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #mypresets-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #mypresets-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #mypresets-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #mypresets-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #mypresets-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#mypresets-picart .container-preset {
+  padding-top: 100px; }
+  #mypresets-picart .container-preset h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px; }
+  #mypresets-picart .container-preset .content-mypresets {
+    display: flex;
+    justify-content: center; }
+  #mypresets-picart .container-preset .col-createpreset {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px; }
+    #mypresets-picart .container-preset .col-createpreset a {
+      background: #050505;
+      font-family: Lato;
+      padding: 10px 35px;
+      margin: 10px 0 0 0;
+      font-size: 1em;
+      letter-spacing: 2px;
+      color: #f3f3f3;
+      align-self: center;
+      font-weight: 300;
+      border: none; }
+  #mypresets-picart .container-preset .gallery-preset {
+    margin-top: 30px;
+    width: 70%;
+    padding: 50px 50px;
+    background: #f3f3f3a1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center; }
+    #mypresets-picart .container-preset .gallery-preset .logo-account {
+      width: 60px;
+      height: 60px;
+      background: black;
+      padding: 17px;
+      border-radius: 32px;
+      margin: 0 auto;
+      margin-bottom: 20px; }
+      #mypresets-picart .container-preset .gallery-preset .logo-account svg {
+        color: white; }
+    #mypresets-picart .container-preset .gallery-preset h2 {
+      font-family: "Raleway";
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      width: 100%;
+      text-align: center; }
+    #mypresets-picart .container-preset .gallery-preset .item {
+      width: 30%;
+      padding: 20px;
+      position: relative; }
+      #mypresets-picart .container-preset .gallery-preset .item a {
+        transition: .6s; }
+        #mypresets-picart .container-preset .gallery-preset .item a:hover {
+          opacity: .8; }
+      #mypresets-picart .container-preset .gallery-preset .item .buy-preset {
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        transition: .5s; }
+        #mypresets-picart .container-preset .gallery-preset .item .buy-preset a {
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          font-family: "Raleway";
+          font-size: 1.2em;
+          letter-spacing: 1px;
+          color: black;
+          font-weight: 500;
+          padding: 20px 0;
+          background: #ffffff9a; }
+        #mypresets-picart .container-preset .gallery-preset .item .buy-preset:hover {
+          opacity: 1; }
+      #mypresets-picart .container-preset .gallery-preset .item img {
+        width: 100%;
+        transition: .5s; }
+      #mypresets-picart .container-preset .gallery-preset .item .preset-date {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        #mypresets-picart .container-preset .gallery-preset .item .preset-date h5 {
+          font-size: .7em;
+          font-family: Lato;
+          letter-spacing: 3px;
+          padding: 5px;
+          color: #808080;
+          margin: 0; }
+      #mypresets-picart .container-preset .gallery-preset .item .user-see {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        #mypresets-picart .container-preset .gallery-preset .item .user-see h5 {
+          font-size: .7em;
+          font-family: Lato;
+          letter-spacing: 3px;
+          padding: 4px 5px;
+          color: #808080;
+          margin: 0; }
+        #mypresets-picart .container-preset .gallery-preset .item .user-see h4 {
+          font-size: .9em;
+          font-family: Lato;
+          letter-spacing: 3px;
+          margin: 0;
+          color: black;
+          padding: 4px 5px; }
+        #mypresets-picart .container-preset .gallery-preset .item .user-see h3 {
+          font-family: "Raleway";
+          font-size: 1.2em;
+          letter-spacing: 1px;
+          padding: 5px 5px;
+          font-weight: 600; }
+
+#mypresets-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #mypresets-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #mypresets-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #mypresets-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #mypresets-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #mypresets-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #mypresets-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #mypresets-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #mypresets-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+.fancybox-bg {
+  background: #f3f3f3 !important;
+  opacity: 0.8 !important; }
+
+#likes-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #likes-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #likes-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #likes-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #likes-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #likes-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #likes-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #likes-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #likes-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #likes-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #likes-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #likes-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #likes-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #likes-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #likes-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#likes-picart .section-gallery {
+  padding-top: 100px; }
+  #likes-picart .section-gallery h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px; }
+  #likes-picart .section-gallery .col-createpreset {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px; }
+    #likes-picart .section-gallery .col-createpreset a {
+      background: #050505;
+      font-family: Lato;
+      padding: 10px 35px;
+      margin: 10px 0 0 0;
+      font-size: 1em;
+      letter-spacing: 2px;
+      color: #f3f3f3;
+      align-self: center;
+      font-weight: 300;
+      border: none; }
+  #likes-picart .section-gallery .col-likes {
+    display: flex;
+    justify-content: center; }
+  #likes-picart .section-gallery .gallery-feed {
+    margin-top: 30px;
+    width: 80%;
+    padding: 80px 40px;
+    background: #f3f3f3a1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center; }
+    #likes-picart .section-gallery .gallery-feed .logo-account {
+      width: 60px;
+      height: 60px;
+      background: black;
+      padding: 17px;
+      border-radius: 32px;
+      margin: 0 auto;
+      margin-bottom: 20px; }
+      #likes-picart .section-gallery .gallery-feed .logo-account svg {
+        color: white; }
+    #likes-picart .section-gallery .gallery-feed h2 {
+      font-family: "Raleway";
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      width: 100%;
+      text-align: center; }
+    #likes-picart .section-gallery .gallery-feed .item {
+      width: 20%;
+      padding: 15px; }
+      #likes-picart .section-gallery .gallery-feed .item img {
+        width: 100%;
+        transition: .5s; }
+        #likes-picart .section-gallery .gallery-feed .item img:hover {
+          opacity: 0.7; }
+      #likes-picart .section-gallery .gallery-feed .item .user-see {
+        display: flex;
+        flex-direction: wrap;
+        justify-content: space-between; }
+        #likes-picart .section-gallery .gallery-feed .item .user-see h5 {
+          font-size: .7em;
+          font-family: Lato;
+          letter-spacing: 3px;
+          padding: 5px;
+          color: #808080; }
+        #likes-picart .section-gallery .gallery-feed .item .user-see a {
+          margin-top: -3px;
+          margin-right: 5px; }
+        #likes-picart .section-gallery .gallery-feed .item .user-see svg {
+          width: 10px;
+          color: #808080; }
+
+#likes-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #likes-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #likes-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #likes-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #likes-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #likes-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #likes-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #likes-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #likes-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+.fancybox-bg {
+  background: #f3f3f3 !important;
+  opacity: 0.8 !important; }
+
+#savedpresets-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #savedpresets-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #savedpresets-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #savedpresets-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #savedpresets-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #savedpresets-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #savedpresets-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #savedpresets-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #savedpresets-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #savedpresets-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #savedpresets-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #savedpresets-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #savedpresets-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #savedpresets-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #savedpresets-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#savedpresets-picart .container-preset {
+  padding-top: 100px; }
+  #savedpresets-picart .container-preset h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px; }
+  #savedpresets-picart .container-preset .content-mypresets {
+    display: flex;
+    justify-content: center; }
+  #savedpresets-picart .container-preset .col-createpreset {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px; }
+    #savedpresets-picart .container-preset .col-createpreset a {
+      background: #050505;
+      font-family: Lato;
+      padding: 10px 35px;
+      margin: 10px 0 0 0;
+      font-size: 1em;
+      letter-spacing: 2px;
+      color: #f3f3f3;
+      align-self: center;
+      font-weight: 300;
+      border: none; }
+  #savedpresets-picart .container-preset .gallery-preset {
+    margin-top: 30px;
+    width: 70%;
+    padding: 50px 50px;
+    background: #f3f3f3a1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center; }
+    #savedpresets-picart .container-preset .gallery-preset .logo-account {
+      width: 60px;
+      height: 60px;
+      background: black;
+      padding: 17px;
+      border-radius: 32px;
+      margin: 0 auto;
+      margin-bottom: 20px; }
+      #savedpresets-picart .container-preset .gallery-preset .logo-account svg {
+        color: white; }
+    #savedpresets-picart .container-preset .gallery-preset h2 {
+      font-family: "Raleway";
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      width: 100%;
+      text-align: center; }
+    #savedpresets-picart .container-preset .gallery-preset .item {
+      width: 25%;
+      padding: 20px;
+      position: relative; }
+      #savedpresets-picart .container-preset .gallery-preset .item a {
+        transition: .6s; }
+        #savedpresets-picart .container-preset .gallery-preset .item a:hover {
+          opacity: .8; }
+      #savedpresets-picart .container-preset .gallery-preset .item .buy-preset {
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        transition: .5s; }
+        #savedpresets-picart .container-preset .gallery-preset .item .buy-preset a {
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          font-family: "Raleway";
+          font-size: 1.2em;
+          letter-spacing: 1px;
+          color: black;
+          font-weight: 500;
+          padding: 20px 0;
+          background: #ffffff9a; }
+        #savedpresets-picart .container-preset .gallery-preset .item .buy-preset:hover {
+          opacity: 1; }
+      #savedpresets-picart .container-preset .gallery-preset .item img {
+        width: 100%;
+        transition: .5s; }
+      #savedpresets-picart .container-preset .gallery-preset .item .preset-date {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        #savedpresets-picart .container-preset .gallery-preset .item .preset-date h5 {
+          font-size: .7em;
+          font-family: Lato;
+          letter-spacing: 3px;
+          padding: 5px;
+          color: #808080;
+          margin: 0; }
+      #savedpresets-picart .container-preset .gallery-preset .item .user-see {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        #savedpresets-picart .container-preset .gallery-preset .item .user-see h5 {
+          font-size: .7em;
+          font-family: Lato;
+          letter-spacing: 3px;
+          padding: 4px 5px;
+          color: #808080;
+          margin: 0; }
+        #savedpresets-picart .container-preset .gallery-preset .item .user-see h4 {
+          font-size: .9em;
+          font-family: Lato;
+          letter-spacing: 3px;
+          margin: 0;
+          color: black;
+          padding: 4px 5px; }
+        #savedpresets-picart .container-preset .gallery-preset .item .user-see h3 {
+          font-family: "Raleway";
+          font-size: 1em;
+          letter-spacing: 1px;
+          padding: 5px 5px;
+          font-weight: 600; }
+
+#savedpresets-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #savedpresets-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #savedpresets-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #savedpresets-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #savedpresets-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #savedpresets-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #savedpresets-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #savedpresets-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #savedpresets-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+.fancybox-bg {
+  background: #f3f3f3 !important;
+  opacity: 0.8 !important; }
+
+#myshopping-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #myshopping-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #myshopping-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #myshopping-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #myshopping-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #myshopping-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #myshopping-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #myshopping-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #myshopping-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #myshopping-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #myshopping-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #myshopping-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #myshopping-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #myshopping-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #myshopping-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#myshopping-picart .col-cart {
+  padding: 0 50px; }
+
+#myshopping-picart .section-single {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  #myshopping-picart .section-single h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px;
+    margin-bottom: 100px; }
+  #myshopping-picart .section-single .article-cart-title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 30px 50px;
+    border-bottom: 1px solid grey; }
+    #myshopping-picart .section-single .article-cart-title .p-start {
+      width: 1% !important; }
+    #myshopping-picart .section-single .article-cart-title p {
+      width: 18.75%;
+      font-family: "Raleway";
+      font-size: 1em;
+      letter-spacing: 1px;
+      font-weight: 500; }
+    #myshopping-picart .section-single .article-cart-title .p-end {
+      width: 25%;
+      text-align: right; }
+  #myshopping-picart .section-single .article-cart {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid grey; }
+    #myshopping-picart .section-single .article-cart .p-start {
+      width: 10% !important; }
+      #myshopping-picart .section-single .article-cart .p-start a {
+        color: grey; }
+    #myshopping-picart .section-single .article-cart .img-cart {
+      width: 18.75%; }
+      #myshopping-picart .section-single .article-cart .img-cart img {
+        max-height: 100px;
+        max-width: 130px; }
+    #myshopping-picart .section-single .article-cart p {
+      width: 18.75%;
+      font-family: "Raleway";
+      font-size: 1em;
+      color: grey;
+      letter-spacing: 1px;
+      margin: 0; }
+    #myshopping-picart .section-single .article-cart .p-end {
+      width: 25%;
+      text-align: right;
+      color: grey;
+      font-weight: 600; }
+    #myshopping-picart .section-single .article-cart .enlace-end {
+      background: #050505;
+      font-family: Lato;
+      padding: 10px 26px;
+      margin: 10px 0 0 0;
+      font-size: 1em;
+      letter-spacing: 2px;
+      color: #f3f3f3;
+      align-self: center;
+      font-weight: 300;
+      border: none;
+      cursor: pointer; }
+
+#myshopping-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #myshopping-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #myshopping-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #myshopping-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #myshopping-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #myshopping-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #myshopping-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #myshopping-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #myshopping-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+#createphoto-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #createphoto-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #createphoto-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #createphoto-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #createphoto-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #createphoto-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #createphoto-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #createphoto-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #createphoto-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #createphoto-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #createphoto-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #createphoto-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #createphoto-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #createphoto-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #createphoto-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#createphoto-picart .col-cart {
+  padding: 0 50px; }
+
+#createphoto-picart .section-single {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  #createphoto-picart .section-single h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px;
+    margin-bottom: 100px; }
+  #createphoto-picart .section-single .col-createphoto {
+    display: flex;
+    justify-content: center; }
+    #createphoto-picart .section-single .col-createphoto form {
+      width: 600px;
+      padding: 60px 50px;
+      background: #f3f3f3a1; }
+      #createphoto-picart .section-single .col-createphoto form #output {
+        max-height: 250px;
+        -webkit-box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51);
+        -moz-box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51);
+        box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51); }
+      #createphoto-picart .section-single .col-createphoto form .center-img-file {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 30px 0; }
+      #createphoto-picart .section-single .col-createphoto form h1 {
+        font-family: "Raleway";
+        font-size: 1.5em;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        width: 100%;
+        text-align: center; }
+      #createphoto-picart .section-single .col-createphoto form .soltarphoto {
+        background: 0 0;
+        height: auto;
+        border: 2px dashed rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+        padding: 10px 15px;
+        font: 400 15px "Raleway",sans-serif;
+        line-height: 1.4;
+        position: relative; }
+        #createphoto-picart .section-single .col-createphoto form .soltarphoto h5 {
+          font-family: "Raleway";
+          font-size: .8em;
+          letter-spacing: 1px;
+          position: absolute;
+          text-align: center;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 100%;
+          height: 20px; }
+      #createphoto-picart .section-single .col-createphoto form .fileout {
+        width: 100%;
+        height: 130px;
+        background: transparent;
+        opacity: 0; }
+      #createphoto-picart .section-single .col-createphoto form input #file-upload-button {
+        background: #050505 !important;
+        font-family: Lato;
+        padding: 10px 35px;
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: #f3f3f3;
+        align-self: center;
+        font-weight: 300;
+        border: none; }
+      #createphoto-picart .section-single .col-createphoto form input {
+        background: 0 0;
+        height: auto;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+        padding: 10px 15px;
+        font: 400 15px "Raleway",sans-serif;
+        line-height: 1.4; }
+        #createphoto-picart .section-single .col-createphoto form input:focus {
+          box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.05); }
+      #createphoto-picart .section-single .col-createphoto form select {
+        background-color: transparent;
+        width: auto;
+        min-width: 160px;
+        height: auto;
+        border-radius: 0;
+        padding: 10px 15px;
+        border-color: rgba(0, 0, 0, 0.1);
+        color: #7c7c7c;
+        font: 400 15px "Open Sans",sans-serif;
+        line-height: 1.4;
+        -webkit-transition: ease-out .16s;
+        transition: ease-out .16s; }
+        #createphoto-picart .section-single .col-createphoto form select:focus {
+          box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.05); }
+      #createphoto-picart .section-single .col-createphoto form label {
+        font-family: "Raleway";
+        font-size: .8em;
+        letter-spacing: 1px;
+        margin-top: 20px; }
+        #createphoto-picart .section-single .col-createphoto form label svg {
+          height: 20px;
+          margin: 0 10px; }
+      #createphoto-picart .section-single .col-createphoto form a {
+        font-family: "Raleway";
+        font-size: .8em;
+        letter-spacing: 1px;
+        color: grey;
+        padding: 10px 0; }
+      #createphoto-picart .section-single .col-createphoto form .form-check {
+        padding-top: 10px; }
+        #createphoto-picart .section-single .col-createphoto form .form-check label {
+          font-family: "Raleway";
+          font-size: .8em;
+          letter-spacing: 1px;
+          color: grey; }
+      #createphoto-picart .section-single .col-createphoto form .button-form {
+        display: flex;
+        justify-content: center;
+        padding-top: 15px; }
+      #createphoto-picart .section-single .col-createphoto form button {
+        background: #050505;
+        font-family: Lato;
+        padding: 10px 35px;
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: #f3f3f3;
+        align-self: center;
+        font-weight: 300;
+        border: none; }
+      #createphoto-picart .section-single .col-createphoto form .divider-form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; }
+        #createphoto-picart .section-single .col-createphoto form .divider-form div {
+          width: 48%; }
+
+#createphoto-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #createphoto-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #createphoto-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #createphoto-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #createphoto-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #createphoto-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #createphoto-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #createphoto-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #createphoto-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+.height-input-form {
+  height: 50px !important; }
+
+#createpreset-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #createpreset-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #createpreset-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #createpreset-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #createpreset-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #createpreset-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #createpreset-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #createpreset-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #createpreset-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #createpreset-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #createpreset-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #createpreset-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #createpreset-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #createpreset-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #createpreset-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#createpreset-picart .col-cart {
+  padding: 0 50px; }
+
+#createpreset-picart .section-single {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  #createpreset-picart .section-single h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px;
+    margin-bottom: 100px; }
+  #createpreset-picart .section-single .col-createphoto {
+    display: flex;
+    justify-content: center; }
+    #createpreset-picart .section-single .col-createphoto form {
+      width: 600px;
+      padding: 60px 50px;
+      background: #f3f3f3a1; }
+      #createpreset-picart .section-single .col-createphoto form .steps {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; }
+        #createpreset-picart .section-single .col-createphoto form .steps h3 {
+          width: 49%;
+          background: #e6e9ed;
+          color: #434a54;
+          cursor: pointer;
+          border-radius: 5px;
+          font-family: "Raleway";
+          font-size: 1.3em;
+          letter-spacing: 1px;
+          padding: 20px 20px;
+          text-align: center; }
+        #createpreset-picart .section-single .col-createphoto form .steps .select-step {
+          background: #404040;
+          color: white; }
+      #createpreset-picart .section-single .col-createphoto form #output {
+        max-height: 100px;
+        -webkit-box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51);
+        -moz-box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51);
+        box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51); }
+      #createpreset-picart .section-single .col-createphoto form .file-zip {
+        width: 100%; }
+      #createpreset-picart .section-single .col-createphoto form textarea {
+        width: 100%;
+        height: 70px;
+        background: 0 0;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+        padding: 10px 15px;
+        font: 400 15px "Raleway",sans-serif;
+        line-height: 1.4; }
+      #createpreset-picart .section-single .col-createphoto form .center-img-file {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 30px 0; }
+      #createpreset-picart .section-single .col-createphoto form h1 {
+        font-family: "Raleway";
+        font-size: 1.5em;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        width: 100%;
+        text-align: center; }
+      #createpreset-picart .section-single .col-createphoto form .soltarphoto {
+        background: 0 0;
+        height: auto;
+        border: 2px dashed rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+        padding: 10px 15px;
+        font: 400 15px "Raleway",sans-serif;
+        line-height: 1.4;
+        position: relative; }
+        #createpreset-picart .section-single .col-createphoto form .soltarphoto h5 {
+          font-family: "Raleway";
+          font-size: .8em;
+          letter-spacing: 1px;
+          position: absolute;
+          text-align: center;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 100%;
+          height: 20px; }
+      #createpreset-picart .section-single .col-createphoto form .fileout {
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        opacity: 0; }
+      #createpreset-picart .section-single .col-createphoto form input #file-upload-button {
+        background: #050505 !important;
+        font-family: Lato;
+        padding: 10px 35px;
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: #f3f3f3;
+        align-self: center;
+        font-weight: 300;
+        border: none; }
+      #createpreset-picart .section-single .col-createphoto form input {
+        background: 0 0;
+        height: auto;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+        padding: 10px 15px;
+        font: 400 15px "Raleway",sans-serif;
+        line-height: 1.4; }
+        #createpreset-picart .section-single .col-createphoto form input:focus {
+          box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.05); }
+      #createpreset-picart .section-single .col-createphoto form select {
+        background-color: transparent;
+        width: auto;
+        min-width: 160px;
+        height: auto;
+        border-radius: 0;
+        padding: 10px 15px;
+        border-color: rgba(0, 0, 0, 0.1);
+        color: #7c7c7c;
+        font: 400 15px "Open Sans",sans-serif;
+        line-height: 1.4;
+        -webkit-transition: ease-out .16s;
+        transition: ease-out .16s; }
+        #createpreset-picart .section-single .col-createphoto form select:focus {
+          box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.05); }
+      #createpreset-picart .section-single .col-createphoto form label {
+        font-family: "Raleway";
+        font-size: .8em;
+        letter-spacing: 1px;
+        margin-top: 20px; }
+        #createpreset-picart .section-single .col-createphoto form label svg {
+          height: 20px;
+          margin: 0 10px; }
+      #createpreset-picart .section-single .col-createphoto form a {
+        font-family: "Raleway";
+        font-size: .8em;
+        letter-spacing: 1px;
+        color: grey;
+        padding: 10px 0; }
+      #createpreset-picart .section-single .col-createphoto form .form-check {
+        padding-top: 10px; }
+        #createpreset-picart .section-single .col-createphoto form .form-check label {
+          font-family: "Raleway";
+          font-size: .8em;
+          letter-spacing: 1px;
+          color: grey; }
+      #createpreset-picart .section-single .col-createphoto form .button-form {
+        display: flex;
+        justify-content: center;
+        padding-top: 15px; }
+      #createpreset-picart .section-single .col-createphoto form button {
+        background: #050505;
+        font-family: Lato;
+        padding: 10px 35px;
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: #f3f3f3;
+        align-self: center;
+        font-weight: 300;
+        border: none; }
+      #createpreset-picart .section-single .col-createphoto form .divider-form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; }
+        #createpreset-picart .section-single .col-createphoto form .divider-form div {
+          width: 48%; }
+
+#createpreset-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #createpreset-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #createpreset-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #createpreset-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #createpreset-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #createpreset-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #createpreset-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #createpreset-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #createpreset-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+.height-input-form {
+  height: 40px !important; }
+
+#editphoto-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #editphoto-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #editphoto-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #editphoto-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #editphoto-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #editphoto-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #editphoto-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #editphoto-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #editphoto-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #editphoto-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #editphoto-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #editphoto-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #editphoto-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #editphoto-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #editphoto-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#editphoto-picart .col-cart {
+  padding: 0 50px; }
+
+#editphoto-picart .section-single {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  #editphoto-picart .section-single h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px;
+    margin-bottom: 100px; }
+  #editphoto-picart .section-single .col-createphoto {
+    display: flex;
+    justify-content: center; }
+    #editphoto-picart .section-single .col-createphoto form {
+      width: 600px;
+      padding: 60px 50px;
+      background: #f3f3f3a1; }
+      #editphoto-picart .section-single .col-createphoto form #output {
+        max-height: 250px;
+        -webkit-box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51);
+        -moz-box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51);
+        box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51); }
+      #editphoto-picart .section-single .col-createphoto form .center-img-file {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 30px 0; }
+      #editphoto-picart .section-single .col-createphoto form h1 {
+        font-family: "Raleway";
+        font-size: 1.5em;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        width: 100%;
+        text-align: center; }
+      #editphoto-picart .section-single .col-createphoto form .soltarphoto {
+        background: 0 0;
+        height: auto;
+        border: 2px dashed rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+        padding: 10px 15px;
+        font: 400 15px "Raleway",sans-serif;
+        line-height: 1.4;
+        position: relative; }
+        #editphoto-picart .section-single .col-createphoto form .soltarphoto h5 {
+          font-family: "Raleway";
+          font-size: .8em;
+          letter-spacing: 1px;
+          position: absolute;
+          text-align: center;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 100%;
+          height: 20px; }
+      #editphoto-picart .section-single .col-createphoto form .fileout {
+        width: 100%;
+        height: 130px;
+        background: transparent;
+        opacity: 0; }
+      #editphoto-picart .section-single .col-createphoto form input #file-upload-button {
+        background: #050505 !important;
+        font-family: Lato;
+        padding: 10px 35px;
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: #f3f3f3;
+        align-self: center;
+        font-weight: 300;
+        border: none; }
+      #editphoto-picart .section-single .col-createphoto form input {
+        background: 0 0;
+        height: auto;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+        padding: 10px 15px;
+        font: 400 15px "Raleway",sans-serif;
+        line-height: 1.4; }
+        #editphoto-picart .section-single .col-createphoto form input:focus {
+          box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.05); }
+      #editphoto-picart .section-single .col-createphoto form select {
+        background-color: transparent;
+        width: auto;
+        min-width: 160px;
+        height: auto;
+        border-radius: 0;
+        padding: 10px 15px;
+        border-color: rgba(0, 0, 0, 0.1);
+        color: #7c7c7c;
+        font: 400 15px "Open Sans",sans-serif;
+        line-height: 1.4;
+        -webkit-transition: ease-out .16s;
+        transition: ease-out .16s; }
+        #editphoto-picart .section-single .col-createphoto form select:focus {
+          box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.05); }
+      #editphoto-picart .section-single .col-createphoto form label {
+        font-family: "Raleway";
+        font-size: .8em;
+        letter-spacing: 1px;
+        margin-top: 20px; }
+        #editphoto-picart .section-single .col-createphoto form label svg {
+          height: 20px;
+          margin: 0 10px; }
+      #editphoto-picart .section-single .col-createphoto form a {
+        font-family: "Raleway";
+        font-size: .8em;
+        letter-spacing: 1px;
+        color: grey;
+        padding: 10px 0; }
+      #editphoto-picart .section-single .col-createphoto form .form-check {
+        padding-top: 10px; }
+        #editphoto-picart .section-single .col-createphoto form .form-check label {
+          font-family: "Raleway";
+          font-size: .8em;
+          letter-spacing: 1px;
+          color: grey; }
+      #editphoto-picart .section-single .col-createphoto form .button-form {
+        display: flex;
+        justify-content: center;
+        padding-top: 15px; }
+      #editphoto-picart .section-single .col-createphoto form button {
+        background: #050505;
+        font-family: Lato;
+        padding: 10px 35px;
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: #f3f3f3;
+        align-self: center;
+        font-weight: 300;
+        border: none; }
+      #editphoto-picart .section-single .col-createphoto form .divider-form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; }
+        #editphoto-picart .section-single .col-createphoto form .divider-form div {
+          width: 48%; }
+
+#editphoto-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #editphoto-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #editphoto-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #editphoto-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #editphoto-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #editphoto-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #editphoto-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #editphoto-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #editphoto-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+.height-input-form {
+  height: 50px !important; }
+
+#editpreset-picart .nav-home {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 9999; }
+  #editpreset-picart .nav-home h1 {
+    position: absolute;
+    left: 51px;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: 600;
+    color: #f3f3f3a1 !important;
+    z-index: 996; }
+  #editpreset-picart .nav-home ul {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    font-family: "Lato";
+    margin-top: 40px;
+    margin-right: 60px; }
+    #editpreset-picart .nav-home ul li {
+      position: relative;
+      transition: .5s; }
+      #editpreset-picart .nav-home ul li ul {
+        display: none;
+        width: 200px;
+        transition: .5s; }
+        #editpreset-picart .nav-home ul li ul li {
+          background: #000000da;
+          padding: 12px 0 12px 15px; }
+          #editpreset-picart .nav-home ul li ul li svg {
+            width: 12px;
+            color: #a5a5a5;
+            transition: .5s; }
+        #editpreset-picart .nav-home ul li ul a {
+          color: white;
+          font-size: 1em;
+          padding-left: 10px !important;
+          font-weight: 300;
+          transition: .5s; }
+        #editpreset-picart .nav-home ul li ul:hover {
+          display: block !important;
+          position: absolute;
+          margin: -10px 0 0 -30px;
+          left: 0px;
+          transition: .5s; }
+      #editpreset-picart .nav-home ul li:hover > ul {
+        display: block !important;
+        position: absolute;
+        margin: 0px 0 0 -30px;
+        padding-top: 10px;
+        left: 0px;
+        z-index: 9960;
+        transition: .5s; }
+      #editpreset-picart .nav-home ul li .menuitem {
+        padding-right: 25px;
+        font-weight: 500;
+        transition: .5s; }
+        #editpreset-picart .nav-home ul li .menuitem::after {
+          content: url("https://informatica.ieszaidinvergeles.org:10015/laraveles/PICART/public/assets/frontend/images/flecha.png");
+          width: 30px;
+          height: 30px;
+          bottom: -5px;
+          right: -10px;
+          position: absolute; }
+      #editpreset-picart .nav-home ul li a {
+        color: #000000;
+        font-size: 1.1em;
+        padding: 0 20px;
+        font-weight: 300;
+        transition: .5s; }
+        #editpreset-picart .nav-home ul li a:hover {
+          text-decoration: none;
+          color: grey;
+          transition: .5s; }
+      #editpreset-picart .nav-home ul li .sign {
+        background: #050505;
+        font-family: Lato;
+        padding: 8px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+        color: #f3f3f3; }
+
+#editpreset-picart .col-cart {
+  padding: 0 50px; }
+
+#editpreset-picart .section-single {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  #editpreset-picart .section-single h1 {
+    font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px;
+    margin-bottom: 100px; }
+  #editpreset-picart .section-single .col-createphoto {
+    display: flex;
+    justify-content: center; }
+    #editpreset-picart .section-single .col-createphoto form {
+      width: 600px;
+      padding: 60px 50px;
+      background: #f3f3f3a1; }
+      #editpreset-picart .section-single .col-createphoto form .steps {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; }
+        #editpreset-picart .section-single .col-createphoto form .steps h3 {
+          width: 49%;
+          background: #e6e9ed;
+          color: #434a54;
+          cursor: pointer;
+          border-radius: 5px;
+          font-family: "Raleway";
+          font-size: 1.3em;
+          letter-spacing: 1px;
+          padding: 20px 20px;
+          text-align: center; }
+        #editpreset-picart .section-single .col-createphoto form .steps .select-step {
+          background: #404040;
+          color: white; }
+      #editpreset-picart .section-single .col-createphoto form #output {
+        max-height: 100px;
+        -webkit-box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51);
+        -moz-box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51);
+        box-shadow: 9px 14px 46px -27px rgba(0, 0, 0, 0.51); }
+      #editpreset-picart .section-single .col-createphoto form .file-zip {
+        width: 100%; }
+      #editpreset-picart .section-single .col-createphoto form textarea {
+        width: 100%;
+        height: 70px;
+        background: 0 0;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+        padding: 10px 15px;
+        font: 400 15px "Raleway",sans-serif;
+        line-height: 1.4; }
+      #editpreset-picart .section-single .col-createphoto form .center-img-file {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 30px 0; }
+      #editpreset-picart .section-single .col-createphoto form h1 {
+        font-family: "Raleway";
+        font-size: 1.5em;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        width: 100%;
+        text-align: center; }
+      #editpreset-picart .section-single .col-createphoto form .soltarphoto {
+        background: 0 0;
+        height: auto;
+        border: 2px dashed rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+        padding: 10px 15px;
+        font: 400 15px "Raleway",sans-serif;
+        line-height: 1.4;
+        position: relative; }
+        #editpreset-picart .section-single .col-createphoto form .soltarphoto h5 {
+          font-family: "Raleway";
+          font-size: .8em;
+          letter-spacing: 1px;
+          position: absolute;
+          text-align: center;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 100%;
+          height: 20px; }
+      #editpreset-picart .section-single .col-createphoto form .fileout {
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        opacity: 0; }
+      #editpreset-picart .section-single .col-createphoto form input #file-upload-button {
+        background: #050505 !important;
+        font-family: Lato;
+        padding: 10px 35px;
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: #f3f3f3;
+        align-self: center;
+        font-weight: 300;
+        border: none; }
+      #editpreset-picart .section-single .col-createphoto form input {
+        background: 0 0;
+        height: auto;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+        padding: 10px 15px;
+        font: 400 15px "Raleway",sans-serif;
+        line-height: 1.4; }
+        #editpreset-picart .section-single .col-createphoto form input:focus {
+          box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.05); }
+      #editpreset-picart .section-single .col-createphoto form select {
+        background-color: transparent;
+        width: auto;
+        min-width: 160px;
+        height: auto;
+        border-radius: 0;
+        padding: 10px 15px;
+        border-color: rgba(0, 0, 0, 0.1);
+        color: #7c7c7c;
+        font: 400 15px "Open Sans",sans-serif;
+        line-height: 1.4;
+        -webkit-transition: ease-out .16s;
+        transition: ease-out .16s; }
+        #editpreset-picart .section-single .col-createphoto form select:focus {
+          box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.05); }
+      #editpreset-picart .section-single .col-createphoto form label {
+        font-family: "Raleway";
+        font-size: .8em;
+        letter-spacing: 1px;
+        margin-top: 20px; }
+        #editpreset-picart .section-single .col-createphoto form label svg {
+          height: 20px;
+          margin: 0 10px; }
+      #editpreset-picart .section-single .col-createphoto form a {
+        font-family: "Raleway";
+        font-size: .8em;
+        letter-spacing: 1px;
+        color: grey;
+        padding: 10px 0; }
+      #editpreset-picart .section-single .col-createphoto form .form-check {
+        padding-top: 10px; }
+        #editpreset-picart .section-single .col-createphoto form .form-check label {
+          font-family: "Raleway";
+          font-size: .8em;
+          letter-spacing: 1px;
+          color: grey; }
+      #editpreset-picart .section-single .col-createphoto form .button-form {
+        display: flex;
+        justify-content: center;
+        padding-top: 15px; }
+      #editpreset-picart .section-single .col-createphoto form button {
+        background: #050505;
+        font-family: Lato;
+        padding: 10px 35px;
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: #f3f3f3;
+        align-self: center;
+        font-weight: 300;
+        border: none; }
+      #editpreset-picart .section-single .col-createphoto form .cancel-edit {
+        background-color: transparent;
+        font-family: Lato;
+        padding: 10px 35px;
+        margin: 10px 0 0 0;
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: black;
+        align-self: center;
+        font-weight: 300;
+        border: .8px solid;
+        border-color: rgba(0, 0, 0, 0.1);
+        margin-right: 15px; }
+      #editpreset-picart .section-single .col-createphoto form .divider-form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; }
+        #editpreset-picart .section-single .col-createphoto form .divider-form div {
+          width: 48%; }
+
+#editpreset-picart footer {
+  margin-top: 100px;
+  background: #000000;
+  padding: 80px 0; }
+  #editpreset-picart footer .col-footer-menu {
+    display: flex;
+    flex-direction: row; }
+    #editpreset-picart footer .col-footer-menu ul li {
+      list-style: none;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-weight: 300;
+      color: white; }
+      #editpreset-picart footer .col-footer-menu ul li a {
+        font-family: Raleway;
+        letter-spacing: 1px;
+        line-height: 176%;
+        font-weight: 300;
+        color: white; }
+      #editpreset-picart footer .col-footer-menu ul li:first-child {
+        font-weight: 500; }
+  #editpreset-picart footer .col-logo-footer {
+    display: flex;
+    align-items: center; }
+    #editpreset-picart footer .col-logo-footer h2 {
+      width: 100%;
+      text-align: center;
+      font-family: Raleway;
+      font-size: 3.5em;
+      font-weight: 800;
+      color: white; }
+  #editpreset-picart footer .col-copy {
+    display: flex;
+    align-items: center; }
+    #editpreset-picart footer .col-copy p {
+      width: 100%;
+      text-align: right;
+      font-family: Raleway;
+      letter-spacing: 1px;
+      line-height: 176%;
+      font-size: .8em;
+      font-weight: 300;
+      color: white; }
+
+.height-input-form {
+  height: 40px !important; }

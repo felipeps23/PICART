@@ -35,6 +35,9 @@ body {
     left: 0;
     right: 0;
     margin: auto; }
+    @media screen and (max-width: 1535px) {
+      #home-picart .section-home .line-top {
+        display: none; } }
   #home-picart .section-home .line-bottom {
     position: absolute;
     width: 1px;
@@ -45,6 +48,9 @@ body {
     bottom: -100px;
     z-index: 9997;
     margin: auto; }
+    @media screen and (max-width: 1535px) {
+      #home-picart .section-home .line-bottom {
+        display: none; } }
   #home-picart .section-home .line-left {
     position: absolute;
     width: 50px;
@@ -54,6 +60,9 @@ body {
     left: 0;
     bottom: 0;
     margin: auto; }
+    @media screen and (max-width: 600px) {
+      #home-picart .section-home .line-left {
+        display: none; } }
   #home-picart .section-home .line-right {
     position: absolute;
     width: 50px;
@@ -63,6 +72,9 @@ body {
     right: 0;
     bottom: 0;
     margin: auto; }
+    @media screen and (max-width: 600px) {
+      #home-picart .section-home .line-right {
+        display: none; } }
   #home-picart .section-home .img-home {
     position: absolute;
     top: 0;
@@ -92,6 +104,13 @@ body {
       width: 100%;
       height: 100%;
       background: #ffffff5d; }
+    @media screen and (max-width: 900px) {
+      #home-picart .section-home .img-home {
+        left: 0; } }
+    @media screen and (max-width: 600px) {
+      #home-picart .section-home .img-home {
+        width: 100% !important;
+        height: 80% !important; } }
   #home-picart .section-home .nav-home {
     width: 100%;
     height: 10%;
@@ -173,6 +192,9 @@ body {
             text-decoration: none;
             color: grey;
             transition: .5s; }
+          @media screen and (max-width: 600px) {
+            #home-picart .section-home .nav-home ul li a {
+              padding: 0 10px; } }
         #home-picart .section-home .nav-home ul li .sign {
           background: #050505;
           font-family: Lato;
@@ -194,6 +216,12 @@ body {
         font-size: 160px;
         font-weight: 400;
         padding-left: 50px; }
+        @media screen and (max-width: 1770px) {
+          #home-picart .section-home .contain-home .text-home h1 {
+            font-size: 100px; } }
+      @media screen and (max-width: 1055px) {
+        #home-picart .section-home .contain-home .text-home {
+          width: 100%; } }
     #home-picart .section-home .contain-home .banner-home {
       width: 50%;
       display: flex;
@@ -207,6 +235,9 @@ body {
         background-size: cover !important;
         margin-left: 30px;
         z-index: 9995; }
+        @media screen and (max-width: 1535px) {
+          #home-picart .section-home .contain-home .banner-home .container-home-img-1 {
+            display: none; } }
       #home-picart .section-home .contain-home .banner-home .container-home-img-2 {
         width: 300px;
         height: 75%;
@@ -216,6 +247,9 @@ body {
         margin-left: 75px;
         margin-bottom: 150px;
         position: relative; }
+        @media screen and (max-width: 1055px) {
+          #home-picart .section-home .contain-home .banner-home .container-home-img-2 {
+            display: none; } }
         #home-picart .section-home .contain-home .banner-home .container-home-img-2 h3 {
           margin-left: -75px;
           margin-top: 70px;
@@ -224,6 +258,9 @@ body {
           font-family: Lato;
           letter-spacing: 3px;
           -webkit-transform: rotate(-90deg); }
+      @media screen and (max-width: 1055px) {
+        #home-picart .section-home .contain-home .banner-home {
+          display: none; } }
     #home-picart .section-home .contain-home .picart {
       position: absolute;
       bottom: -40px;
@@ -233,11 +270,21 @@ body {
       font-size: 13em;
       font-weight: 600;
       color: #f3f3f3a1 !important; }
+      @media screen and (max-width: 1055px) {
+        #home-picart .section-home .contain-home .picart {
+          font-size: 7em; } }
 
 #home-picart .section-place {
   padding: 200px 0;
   background: #f3f3f3a1;
   position: relative; }
+  @media (max-width: 1199px) {
+    #home-picart .section-place .row-place-1 .col-9 {
+      flex: 0 0 100%;
+      max-width: 100%; }
+    #home-picart .section-place .row-place-1 .col-3 {
+      flex: 0 0 100%;
+      max-width: 100%; } }
   #home-picart .section-place .row-place-1 .img-place {
     width: 100%;
     height: 550px;
@@ -256,6 +303,12 @@ body {
     margin-left: -164px;
     font-weight: 500;
     margin-top: 50px; }
+    @media (max-width: 1199px) {
+      #home-picart .section-place .row-place-1 h2 {
+        width: 100%;
+        margin-left: 0;
+        font-weight: 500;
+        margin-top: 50px; } }
   #home-picart .section-place .row-upload {
     padding-top: 100px; }
     #home-picart .section-place .row-upload .upload-center {
@@ -264,7 +317,7 @@ body {
       align-items: center;
       flex-direction: column; }
     #home-picart .section-place .row-upload .text-upload {
-      width: 500px; }
+      max-width: 500px; }
       #home-picart .section-place .row-upload .text-upload p {
         text-align: justify;
         font-family: Raleway;
@@ -305,6 +358,19 @@ body {
       font-size: 13em !important;
       font-weight: 600 !important;
       color: #8989890c !important; }
+    @media (max-width: 1199px) {
+      #home-picart .section-account .account {
+        display: none; } }
+  @media (max-width: 1199px) {
+    #home-picart .section-account .row-account-1 .col-7 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin: 0 0 40px 0; }
+      #home-picart .section-account .row-account-1 .col-7 ul {
+        width: 100%; }
+    #home-picart .section-account .row-account-1 .col-5 {
+      flex: 0 0 100%;
+      max-width: 100%; } }
   #home-picart .section-account .row-account-1 h2 {
     font-family: Raleway;
     font-size: 4.5em;
@@ -338,6 +404,13 @@ body {
   padding: 200px 0;
   background: #f3f3f3a1;
   position: relative; }
+  @media (max-width: 1199px) {
+    #home-picart .section-preset .col-9 {
+      flex: 0 0 100%;
+      max-width: 100%; }
+    #home-picart .section-preset .col-3 {
+      flex: 0 0 100%;
+      max-width: 100%; } }
   #home-picart .section-preset .preset {
     position: absolute;
     right: 20px;
@@ -401,6 +474,10 @@ body {
     width: 560px;
     margin-left: -300px;
     font-weight: 500; }
+    @media (max-width: 1199px) {
+      #home-picart .section-preset h2 {
+        width: 100%;
+        margin-left: 0; } }
   #home-picart .section-preset p {
     margin-top: 100px;
     text-align: justify;
@@ -408,9 +485,12 @@ body {
     letter-spacing: 1px;
     line-height: 176%;
     font-weight: 500;
-    width: 350px;
+    max-width: 350px;
     margin-left: -50px;
     margin-bottom: 30px; }
+    @media (max-width: 1199px) {
+      #home-picart .section-preset p {
+        margin-left: 0; } }
   #home-picart .section-preset a {
     background: #050505;
     font-family: Lato;
@@ -420,6 +500,9 @@ body {
     color: #f3f3f3;
     margin-left: -50px;
     font-weight: 300; }
+    @media (max-width: 1199px) {
+      #home-picart .section-preset a {
+        margin-left: 0; } }
 
 #home-picart footer {
   background: #000000;
@@ -442,6 +525,11 @@ body {
         color: white; }
       #home-picart footer .col-footer-menu ul li:first-child {
         font-weight: 500; }
+    @media (max-width: 991px) {
+      #home-picart footer .col-footer-menu {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 1; } }
   #home-picart footer .col-logo-footer {
     display: flex;
     align-items: center; }
@@ -452,6 +540,11 @@ body {
       font-size: 3.5em;
       font-weight: 800;
       color: white; }
+    @media (max-width: 991px) {
+      #home-picart footer .col-logo-footer {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 0; } }
   #home-picart footer .col-copy {
     display: flex;
     align-items: center; }
@@ -464,6 +557,11 @@ body {
       font-size: .8em;
       font-weight: 300;
       color: white; }
+    @media (max-width: 991px) {
+      #home-picart footer .col-copy {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 2; } }
 
 #home-picart .video {
   min-width: 500px;
@@ -493,6 +591,9 @@ body {
     font-weight: 600;
     color: #f3f3f3a1 !important;
     z-index: 996; }
+    @media (max-width: 991px) {
+      #feed-picart .nav-home h1 {
+        font-size: 6em; } }
   #feed-picart .nav-home ul {
     align-self: flex-end;
     display: flex;
@@ -602,9 +703,17 @@ body {
         #feed-picart .section-gallery .gallery-feed .item .user-see svg {
           width: 10px;
           color: #808080; }
+      @media (max-width: 1199px) {
+        #feed-picart .section-gallery .gallery-feed .item {
+          width: 30%; } }
+      @media (max-width: 767px) {
+        #feed-picart .section-gallery .gallery-feed .item {
+          width: 50%; } }
+      @media (max-width: 575px) {
+        #feed-picart .section-gallery .gallery-feed .item {
+          width: 100%; } }
 
 #feed-picart footer {
-  margin-top: 100px;
   background: #000000;
   padding: 80px 0; }
   #feed-picart footer .col-footer-menu {
@@ -625,6 +734,11 @@ body {
         color: white; }
       #feed-picart footer .col-footer-menu ul li:first-child {
         font-weight: 500; }
+    @media (max-width: 991px) {
+      #feed-picart footer .col-footer-menu {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 1; } }
   #feed-picart footer .col-logo-footer {
     display: flex;
     align-items: center; }
@@ -635,6 +749,11 @@ body {
       font-size: 3.5em;
       font-weight: 800;
       color: white; }
+    @media (max-width: 991px) {
+      #feed-picart footer .col-logo-footer {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 0; } }
   #feed-picart footer .col-copy {
     display: flex;
     align-items: center; }
@@ -647,6 +766,11 @@ body {
       font-size: .8em;
       font-weight: 300;
       color: white; }
+    @media (max-width: 991px) {
+      #feed-picart footer .col-copy {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 2; } }
 
 .fancybox-bg {
   background: #f3f3f3 !important;
@@ -669,6 +793,9 @@ body {
     font-weight: 600;
     color: #f3f3f3a1 !important;
     z-index: 996; }
+    @media (max-width: 991px) {
+      #singlephoto-picart .nav-home h1 {
+        font-size: 6em; } }
   #singlephoto-picart .nav-home ul {
     align-self: flex-end;
     display: flex;
@@ -748,6 +875,14 @@ body {
     font-size: 2em;
     letter-spacing: 1px;
     margin-bottom: 100px; }
+  @media (max-width: 1199px) {
+    #singlephoto-picart .section-single .col-7, #singlephoto-picart .section-single .col-5 {
+      flex: 0 0 100%;
+      max-width: 100%; }
+    #singlephoto-picart .section-single .col-7 {
+      margin: 0 0 60px 0; }
+    #singlephoto-picart .section-single .col-5 .features {
+      padding: 30px 30px; } }
   #singlephoto-picart .section-single .single-feed {
     width: 100%; }
     #singlephoto-picart .section-single .single-feed .item {
@@ -913,7 +1048,6 @@ body {
     font-weight: 300; }
 
 #singlephoto-picart footer {
-  margin-top: 100px;
   background: #000000;
   padding: 80px 0; }
   #singlephoto-picart footer .col-footer-menu {
@@ -934,6 +1068,11 @@ body {
         color: white; }
       #singlephoto-picart footer .col-footer-menu ul li:first-child {
         font-weight: 500; }
+    @media (max-width: 991px) {
+      #singlephoto-picart footer .col-footer-menu {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 1; } }
   #singlephoto-picart footer .col-logo-footer {
     display: flex;
     align-items: center; }
@@ -944,6 +1083,11 @@ body {
       font-size: 3.5em;
       font-weight: 800;
       color: white; }
+    @media (max-width: 991px) {
+      #singlephoto-picart footer .col-logo-footer {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 0; } }
   #singlephoto-picart footer .col-copy {
     display: flex;
     align-items: center; }
@@ -956,6 +1100,11 @@ body {
       font-size: .8em;
       font-weight: 300;
       color: white; }
+    @media (max-width: 991px) {
+      #singlephoto-picart footer .col-copy {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 2; } }
 
 #preset-picart .nav-home {
   width: 100%;
@@ -974,6 +1123,9 @@ body {
     font-weight: 600;
     color: #f3f3f3a1 !important;
     z-index: 996; }
+    @media (max-width: 991px) {
+      #preset-picart .nav-home h1 {
+        font-size: 6em; } }
   #preset-picart .nav-home ul {
     align-self: flex-end;
     display: flex;
@@ -1122,9 +1274,14 @@ body {
           letter-spacing: 1px;
           padding: 5px 5px;
           font-weight: 600; }
+      @media (max-width: 767px) {
+        #preset-picart .container-preset .gallery-preset .item {
+          width: 50%; } }
+      @media (max-width: 575px) {
+        #preset-picart .container-preset .gallery-preset .item {
+          width: 100%; } }
 
 #preset-picart footer {
-  margin-top: 100px;
   background: #000000;
   padding: 80px 0; }
   #preset-picart footer .col-footer-menu {
@@ -1145,6 +1302,11 @@ body {
         color: white; }
       #preset-picart footer .col-footer-menu ul li:first-child {
         font-weight: 500; }
+    @media (max-width: 991px) {
+      #preset-picart footer .col-footer-menu {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 1; } }
   #preset-picart footer .col-logo-footer {
     display: flex;
     align-items: center; }
@@ -1155,6 +1317,11 @@ body {
       font-size: 3.5em;
       font-weight: 800;
       color: white; }
+    @media (max-width: 991px) {
+      #preset-picart footer .col-logo-footer {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 0; } }
   #preset-picart footer .col-copy {
     display: flex;
     align-items: center; }
@@ -1167,6 +1334,11 @@ body {
       font-size: .8em;
       font-weight: 300;
       color: white; }
+    @media (max-width: 991px) {
+      #preset-picart footer .col-copy {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 2; } }
 
 .fancybox-bg {
   background: #f3f3f3 !important;
@@ -1189,6 +1361,9 @@ body {
     font-weight: 600;
     color: #f3f3f3a1 !important;
     z-index: 996; }
+    @media (max-width: 991px) {
+      #singlepreset-picart .nav-home h1 {
+        font-size: 6em; } }
   #singlepreset-picart .nav-home ul {
     align-self: flex-end;
     display: flex;
@@ -1264,6 +1439,14 @@ body {
 #singlepreset-picart .section-single {
   padding-top: 100px;
   padding-bottom: 100px; }
+  @media (max-width: 1199px) {
+    #singlepreset-picart .section-single .col-7, #singlepreset-picart .section-single .col-5 {
+      flex: 0 0 100%;
+      max-width: 100%; }
+    #singlepreset-picart .section-single .col-7 {
+      margin: 0 0 60px 0; }
+    #singlepreset-picart .section-single .col-5 .features {
+      padding: 30px 30px; } }
   #singlepreset-picart .section-single h1 {
     font-family: "Raleway";
     font-size: 2em;
@@ -1489,7 +1672,6 @@ body {
   color: orange; }
 
 #singlepreset-picart footer {
-  margin-top: 100px;
   background: #000000;
   padding: 80px 0; }
   #singlepreset-picart footer .col-footer-menu {
@@ -1510,6 +1692,11 @@ body {
         color: white; }
       #singlepreset-picart footer .col-footer-menu ul li:first-child {
         font-weight: 500; }
+    @media (max-width: 991px) {
+      #singlepreset-picart footer .col-footer-menu {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 1; } }
   #singlepreset-picart footer .col-logo-footer {
     display: flex;
     align-items: center; }
@@ -1520,6 +1707,11 @@ body {
       font-size: 3.5em;
       font-weight: 800;
       color: white; }
+    @media (max-width: 991px) {
+      #singlepreset-picart footer .col-logo-footer {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 0; } }
   #singlepreset-picart footer .col-copy {
     display: flex;
     align-items: center; }
@@ -1532,6 +1724,11 @@ body {
       font-size: .8em;
       font-weight: 300;
       color: white; }
+    @media (max-width: 991px) {
+      #singlepreset-picart footer .col-copy {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 2; } }
 
 #cart-picart .nav-home {
   width: 100%;
@@ -1789,6 +1986,9 @@ body {
       font-weight: 600;
       color: #f3f3f3a1 !important;
       z-index: 996; }
+      @media (max-width: 991px) {
+        #login-picart .nav-home h1 {
+          font-size: 6em; } }
     #login-picart .nav-home ul {
       align-self: flex-end;
       display: flex;
@@ -1873,6 +2073,9 @@ body {
       background-position: center !important;
       background-repeat: no-repeat !important;
       background-size: cover !important; }
+      @media (max-width: 991px) {
+        #login-picart .container-login .img-login {
+          width: 100%; } }
     #login-picart .container-login .login-form {
       width: 50%;
       height: 100%;
@@ -1880,10 +2083,17 @@ body {
       display: flex;
       justify-content: center;
       align-items: center; }
+      @media (max-width: 991px) {
+        #login-picart .container-login .login-form {
+          width: 100%;
+          position: absolute; } }
       #login-picart .container-login .login-form form {
         width: 500px;
         padding: 100px 50px;
         background: #f3f3f3a1; }
+        @media (max-width: 991px) {
+          #login-picart .container-login .login-form form {
+            background: #f3f3f3de !important; } }
         #login-picart .container-login .login-form form h1 {
           font-family: "Raleway";
           font-size: 1.5em;
@@ -1954,6 +2164,9 @@ body {
       font-weight: 600;
       color: #f3f3f3a1 !important;
       z-index: 996; }
+      @media (max-width: 991px) {
+        #register-picart .nav-home h1 {
+          font-size: 6em; } }
     #register-picart .nav-home ul {
       align-self: flex-end;
       display: flex;
@@ -2038,6 +2251,9 @@ body {
       background-position: center !important;
       background-repeat: no-repeat !important;
       background-size: cover !important; }
+      @media (max-width: 991px) {
+        #register-picart .container-login .img-login {
+          width: 100%; } }
     #register-picart .container-login .login-form {
       width: 50%;
       height: 100%;
@@ -2045,10 +2261,17 @@ body {
       display: flex;
       justify-content: center;
       align-items: center; }
+      @media (max-width: 991px) {
+        #register-picart .container-login .login-form {
+          width: 100%;
+          position: absolute; } }
       #register-picart .container-login .login-form form {
         width: 500px;
         padding: 100px 50px;
         background: #f3f3f3a1; }
+        @media (max-width: 991px) {
+          #register-picart .container-login .login-form form {
+            background: #f3f3f3de !important; } }
         #register-picart .container-login .login-form form h1 {
           font-family: "Raleway";
           font-size: 1.5em;
@@ -2116,6 +2339,9 @@ body {
     font-weight: 600;
     color: #f3f3f3a1 !important;
     z-index: 996; }
+    @media (max-width: 991px) {
+      #administration-picart .nav-home h1 {
+        font-size: 6em; } }
   #administration-picart .nav-home ul {
     align-self: flex-end;
     display: flex;
@@ -2199,6 +2425,10 @@ body {
   #administration-picart .section-account .col-account {
     display: flex;
     justify-content: center; }
+    @media (max-width: 991px) {
+      #administration-picart .section-account .col-account {
+        flex: 0 0 100%;
+        max-width: 100%; } }
     #administration-picart .section-account .col-account .account-container {
       width: 800px;
       display: flex;
@@ -2323,7 +2553,6 @@ body {
     background-position: -112px bottom !important; }
 
 #administration-picart footer {
-  margin-top: 100px;
   background: #000000;
   padding: 80px 0; }
   #administration-picart footer .col-footer-menu {
@@ -2344,6 +2573,11 @@ body {
         color: white; }
       #administration-picart footer .col-footer-menu ul li:first-child {
         font-weight: 500; }
+    @media (max-width: 991px) {
+      #administration-picart footer .col-footer-menu {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 1; } }
   #administration-picart footer .col-logo-footer {
     display: flex;
     align-items: center; }
@@ -2354,6 +2588,11 @@ body {
       font-size: 3.5em;
       font-weight: 800;
       color: white; }
+    @media (max-width: 991px) {
+      #administration-picart footer .col-logo-footer {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 0; } }
   #administration-picart footer .col-copy {
     display: flex;
     align-items: center; }
@@ -2366,6 +2605,11 @@ body {
       font-size: .8em;
       font-weight: 300;
       color: white; }
+    @media (max-width: 991px) {
+      #administration-picart footer .col-copy {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 2; } }
 
 #myphotos-picart .nav-home {
   width: 100%;
@@ -2384,6 +2628,9 @@ body {
     font-weight: 600;
     color: #f3f3f3a1 !important;
     z-index: 996; }
+    @media (max-width: 991px) {
+      #myphotos-picart .nav-home h1 {
+        font-size: 6em; } }
   #myphotos-picart .nav-home ul {
     align-self: flex-end;
     display: flex;
@@ -2462,6 +2709,10 @@ body {
     font-family: "Raleway";
     font-size: 2em;
     letter-spacing: 1px; }
+  @media (max-width: 991px) {
+    #myphotos-picart .section-gallery .col-6 {
+      flex: 0 0 100%;
+      max-width: 100%; } }
   #myphotos-picart .section-gallery .col-createpreset {
     display: flex;
     justify-content: center;
@@ -2577,6 +2828,9 @@ body {
     #myphotos-picart .section-gallery .gallery-feed .item {
       width: 25%;
       padding: 15px; }
+      @media (max-width: 991px) {
+        #myphotos-picart .section-gallery .gallery-feed .item {
+          width: 30%; } }
       #myphotos-picart .section-gallery .gallery-feed .item img {
         width: 100%;
         transition: .5s; }
@@ -2600,7 +2854,6 @@ body {
           color: #808080; }
 
 #myphotos-picart footer {
-  margin-top: 100px;
   background: #000000;
   padding: 80px 0; }
   #myphotos-picart footer .col-footer-menu {
@@ -2621,6 +2874,11 @@ body {
         color: white; }
       #myphotos-picart footer .col-footer-menu ul li:first-child {
         font-weight: 500; }
+    @media (max-width: 991px) {
+      #myphotos-picart footer .col-footer-menu {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 1; } }
   #myphotos-picart footer .col-logo-footer {
     display: flex;
     align-items: center; }
@@ -2631,6 +2889,11 @@ body {
       font-size: 3.5em;
       font-weight: 800;
       color: white; }
+    @media (max-width: 991px) {
+      #myphotos-picart footer .col-logo-footer {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 0; } }
   #myphotos-picart footer .col-copy {
     display: flex;
     align-items: center; }
@@ -2643,6 +2906,11 @@ body {
       font-size: .8em;
       font-weight: 300;
       color: white; }
+    @media (max-width: 991px) {
+      #myphotos-picart footer .col-copy {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 2; } }
 
 .fancybox-bg {
   background: #f3f3f3 !important;
@@ -2665,6 +2933,9 @@ body {
     font-weight: 600;
     color: #f3f3f3a1 !important;
     z-index: 996; }
+    @media (max-width: 991px) {
+      #mypresets-picart .nav-home h1 {
+        font-size: 6em; } }
   #mypresets-picart .nav-home ul {
     align-self: flex-end;
     display: flex;
@@ -2770,6 +3041,9 @@ body {
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: center; }
+    @media (max-width: 991px) {
+      #mypresets-picart .container-preset .gallery-preset {
+        width: 100%; } }
     #mypresets-picart .container-preset .gallery-preset .logo-account {
       width: 60px;
       height: 60px;
@@ -2791,6 +3065,9 @@ body {
       width: 30%;
       padding: 20px;
       position: relative; }
+      @media (max-width: 767px) {
+        #mypresets-picart .container-preset .gallery-preset .item {
+          width: 50%; } }
       #mypresets-picart .container-preset .gallery-preset .item a {
         transition: .6s; }
         #mypresets-picart .container-preset .gallery-preset .item a:hover {
@@ -2921,6 +3198,9 @@ body {
     font-weight: 600;
     color: #f3f3f3a1 !important;
     z-index: 996; }
+    @media (max-width: 991px) {
+      #likes-picart .nav-home h1 {
+        font-size: 6em; } }
   #likes-picart .nav-home ul {
     align-self: flex-end;
     display: flex;
@@ -3026,6 +3306,9 @@ body {
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: center; }
+    @media (max-width: 991px) {
+      #likes-picart .section-gallery .gallery-feed {
+        width: 100%; } }
     #likes-picart .section-gallery .gallery-feed .logo-account {
       width: 60px;
       height: 60px;
@@ -3046,6 +3329,12 @@ body {
     #likes-picart .section-gallery .gallery-feed .item {
       width: 20%;
       padding: 15px; }
+      @media (max-width: 991px) {
+        #likes-picart .section-gallery .gallery-feed .item {
+          width: 30%; } }
+      @media (max-width: 767px) {
+        #likes-picart .section-gallery .gallery-feed .item {
+          width: 50%; } }
       #likes-picart .section-gallery .gallery-feed .item img {
         width: 100%;
         transition: .5s; }
@@ -3069,7 +3358,6 @@ body {
           color: #808080; }
 
 #likes-picart footer {
-  margin-top: 100px;
   background: #000000;
   padding: 80px 0; }
   #likes-picart footer .col-footer-menu {
@@ -3090,6 +3378,11 @@ body {
         color: white; }
       #likes-picart footer .col-footer-menu ul li:first-child {
         font-weight: 500; }
+    @media (max-width: 991px) {
+      #likes-picart footer .col-footer-menu {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 1; } }
   #likes-picart footer .col-logo-footer {
     display: flex;
     align-items: center; }
@@ -3100,6 +3393,11 @@ body {
       font-size: 3.5em;
       font-weight: 800;
       color: white; }
+    @media (max-width: 991px) {
+      #likes-picart footer .col-logo-footer {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 0; } }
   #likes-picart footer .col-copy {
     display: flex;
     align-items: center; }
@@ -3112,6 +3410,11 @@ body {
       font-size: .8em;
       font-weight: 300;
       color: white; }
+    @media (max-width: 991px) {
+      #likes-picart footer .col-copy {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 2; } }
 
 .fancybox-bg {
   background: #f3f3f3 !important;
@@ -3134,6 +3437,9 @@ body {
     font-weight: 600;
     color: #f3f3f3a1 !important;
     z-index: 996; }
+    @media (max-width: 991px) {
+      #savedpresets-picart .nav-home h1 {
+        font-size: 6em; } }
   #savedpresets-picart .nav-home ul {
     align-self: flex-end;
     display: flex;
@@ -3239,6 +3545,9 @@ body {
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: center; }
+    @media (max-width: 991px) {
+      #savedpresets-picart .container-preset .gallery-preset {
+        width: 100%; } }
     #savedpresets-picart .container-preset .gallery-preset .logo-account {
       width: 60px;
       height: 60px;
@@ -3260,6 +3569,12 @@ body {
       width: 25%;
       padding: 20px;
       position: relative; }
+      @media (max-width: 991px) {
+        #savedpresets-picart .container-preset .gallery-preset .item {
+          width: 30%; } }
+      @media (max-width: 767px) {
+        #savedpresets-picart .container-preset .gallery-preset .item {
+          width: 50%; } }
       #savedpresets-picart .container-preset .gallery-preset .item a {
         transition: .6s; }
         #savedpresets-picart .container-preset .gallery-preset .item a:hover {
@@ -3325,7 +3640,6 @@ body {
           font-weight: 600; }
 
 #savedpresets-picart footer {
-  margin-top: 100px;
   background: #000000;
   padding: 80px 0; }
   #savedpresets-picart footer .col-footer-menu {
@@ -3346,6 +3660,11 @@ body {
         color: white; }
       #savedpresets-picart footer .col-footer-menu ul li:first-child {
         font-weight: 500; }
+    @media (max-width: 991px) {
+      #savedpresets-picart footer .col-footer-menu {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 1; } }
   #savedpresets-picart footer .col-logo-footer {
     display: flex;
     align-items: center; }
@@ -3356,6 +3675,11 @@ body {
       font-size: 3.5em;
       font-weight: 800;
       color: white; }
+    @media (max-width: 991px) {
+      #savedpresets-picart footer .col-logo-footer {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 0; } }
   #savedpresets-picart footer .col-copy {
     display: flex;
     align-items: center; }
@@ -3368,6 +3692,11 @@ body {
       font-size: .8em;
       font-weight: 300;
       color: white; }
+    @media (max-width: 991px) {
+      #savedpresets-picart footer .col-copy {
+        flex: 0 0 50%;
+        max-width: 50%;
+        order: 2; } }
 
 .fancybox-bg {
   background: #f3f3f3 !important;

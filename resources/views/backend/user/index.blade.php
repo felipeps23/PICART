@@ -26,7 +26,7 @@ id -> id del elemento afectado
 <div class="row">
     <div class="col-lg-12">
         <div class="alert alert-success" role="alert">
-            Preset created successfully 2: {{ Session::get('id') }}
+            User created successfully 2: {{ Session::get('id') }}
         </div>
     </div>
 </div>

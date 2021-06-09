@@ -744,3 +744,113 @@ GENERALES
           align-self: center;
           font-weight: 300;
           border: none; }
+          
+          
+          
+          .section-preset{
+            padding-top:100px;
+          }
+          .row-preset h1{
+            font-family: "Raleway";
+    font-size: 2em;
+    letter-spacing: 1px;
+          }
+          .content-mypresets{
+            display: flex;
+    justify-content: center;
+          }
+          .gallery-preset{
+            margin-top: 30px;
+            width: 80%;
+            padding: 50px 50px;
+            background: #f3f3f3a1;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: center;
+          }
+          .gallery-preset p{
+            margin:30px 0 50px 0;
+            text-align: justify;
+              font-family: Raleway;
+              letter-spacing: 1px;
+              line-height: 176%;
+              font-weight: 500;
+              margin-bottom: 30px;
+              font-size:.9em;
+              
+          }
+          .gallery-preset img{
+            max-width:400px;
+            margin-bottom:80px;
+          }
+          .gallery-preset h2{
+            width:100%;
+            text-align:center;
+          }
+          footer{
+        margin-top:100px;
+         background:black;
+         padding:80px 0;
+         
+             
+         }
+         .col-footer-menu{
+             display:flex;
+             flex-direction:row;
+             
+             
+             }
+             
+                footer li{
+                    list-style:none;
+                    font-family: Raleway;
+                    letter-spacing: 1px;
+                    line-height: 176%;
+                    font-weight: 300;
+                    color:white;
+                     
+                }
+                    footer li:first-child{
+                        font-weight: 500;
+                    }
+                    footer a{
+                    font-family: Raleway;
+                    letter-spacing: 1px;
+                    line-height: 176%;
+                    font-weight: 300;
+                    color:white;
+                    
+                     }
+         .col-logo-footer{
+             display:flex;
+            align-items:center;
+             
+         }
+         footer h2{
+             width:100%;
+             text-align:center;
+                font-family: Raleway;
+                font-size: 3.5em;
+                font-weight: 800;
+                color:white;
+                     /*margin-top:20px;*/
+             }
+         
+        .col-copy{
+            display:flex;
+            align-items:center;
+            
+            
+        }
+        .col-copy p{
+                 width:100%;
+                  text-align:right;
+                 font-family: Raleway;
+                    letter-spacing: 1px;
+                    line-height: 176%;
+                    font-size: .8em;
+                    font-weight: 300;
+                    color:white;
+             }
+     

@@ -43,7 +43,9 @@
           
         
         <div class="container-login">
-            <div class="img-login" style="background:url('<?php echo bloginfo('template_directory');?>/assets/images/contact.jpg')">
+            
+            <div class="img-login" style="background:url(' <?= get_field("img_contact"); ?>')">
+                
                 
             </div>
             

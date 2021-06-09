@@ -14,8 +14,7 @@
         Enhorabuena, estás dado de alta, verifica tu cuenta para iniciar sesión.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -34,8 +33,7 @@
         Para poder iniciar sesión hay que verificar el correo, se le acaba de enviar un correo de verificación nuevo.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -54,8 +52,7 @@
         La cuenta se ha verificado correctamente, ya puede iniciar sesión.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -79,8 +76,7 @@
         @endif
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -131,6 +127,7 @@
     <link href="{{url('/assets/frontend/css/style.css')}}" rel="stylesheet">
     <!-- 1. Add latest jQuery and fancybox files -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="png" href="{{ url('/assets/logo.png') }}" />
     
     
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
@@ -169,9 +166,7 @@
           
         
         <div class="container-login">
-            <div class="img-login" style="background:url('{{url('/assets/frontend/images/backlogin.jpg')}}')">
-                
-            </div>
+            <div class="img-login" style="background:url('{{url('/assets/frontend/images/backlogin.jpg')}}')"></div>
             
             <div class="login-form">
                <form method="POST" action="{{ route('login') }}">

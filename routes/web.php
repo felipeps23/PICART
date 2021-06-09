@@ -53,7 +53,7 @@ Route::get('email/restore/{id}/{email}', [UserController::class, 'restoreEmail']
 Route::post('email/restore/{id}/{email}', [UserController::class, 'restorePreviousEmail'])->name('email.restore')->middleware('signed');
 
 //RUTAS BACKEND
-Route::get('backend', [BackendController::class, 'main'])->name('backend.main')->middleware('auth');
+Route::get('backend', [BackendController::class, 'main'])->name('backend.main')->middleware('auth', 'checkAdmin');
 Route::resource('backend/photo', BackendPhotoController::class, ['names' => 'backend.photo'])->middleware('auth', 'checkAdmin'); //PHOTO
 Route::resource('backend/preset', BackendPresetController::class, ['names' => 'backend.preset'])->middleware('auth', 'checkAdmin'); //PRESET
 Route::get('backend/preset/{preset}/editcreate', [BackendPresetController::class, 'editCreate'])->name('backend.preset.editcreate'); //PRESET
